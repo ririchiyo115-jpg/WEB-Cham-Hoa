@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi Tiết Hoa - Chạm Hoa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
      <!-- Top Bar -->
@@ -98,11 +100,20 @@
 
 
                 <!-- Nút mua hàng -->
-                <div class="d-flex align-items-center mt-4">
-                    <input type="number" class="form-control text-center mr-3" value="1" min="1" style="width: 80px;">
-                    <button class="btn btn-danger px-4 py-2" style="background-color: #e83e8c; border: none;">
-                        Thêm vào giỏ hàng
+                <div class="qty-scope mt-4 d-flex align-items-center flex-wrap">
+                    <div class="input-group qty-box mr-3" style="width:130px;">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-secondary qty-minus" type="button">−</button>
+                        </div>
+                        <input type="text" class="form-control text-center qty-input" value="1">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary qty-plus" type="button">+</button>
+                        </div>
+                    </div>
+                    <button id="btn-add" class="btn custom-btn rounded-pill px-4 py-2 btn-add-cart" type="button">
+                        <i class="fas fa-cart-plus mr-1"></i>Thêm vào giỏ hàng
                     </button>
+                    <a href="cart.html" class="btn btn-outline-secondary rounded-pill px-4 py-2 ml-2">Xem giỏ hàng</a>
                 </div>
             </div>
         </div>
@@ -390,7 +401,7 @@
                 phuHop: "Chúc mừng tốt nghiệp, chúc mừng thành tích, tặng bạn bè hoặc gửi lời động viên đến người cần thêm niềm vui và năng lượng tích cực.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             },
-            "tuoi-sang": { 
+            "tuoi-sang-2": { 
                 ten: "Tuổi Sáng", 
                 gia: "340,000đ", 
                 anh: "images/tot nghiep 10.jpg", 
@@ -532,6 +543,39 @@
             document.getElementById('phu-hop').innerText = dataHoa[id].phuHop;
             document.getElementById('bao-quan').innerText = dataHoa[id].baoQuan;
         }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        // Gắn thông tin bó hoa đang xem vào nút "Thêm vào giỏ hàng"
+        (function () {
+            // Các bó hoa đang giảm giá (khớp với mục "Ưu đãi tuần này" ở trang chủ): id -> % giảm
+            var GIAM_GIA = { 'mong-mo': 15, 'diu-dang': 10, 'nang-mai': 20, 'cat-tuong': 12 };
+
+            var id = new URLSearchParams(window.location.search).get('id');
+            if (!id || !dataHoa[id]) { $('#btn-add').prop('disabled', true); return; }
+
+            var h = dataHoa[id];
+            var gia = parseInt(h.gia.replace(/\D/g, ''), 10);          // "520,000đ" -> 520000
+            var pct = GIAM_GIA[id] || 0;
+            var giaBan = pct ? Math.round(gia * (100 - pct) / 100 / 1000) * 1000 : gia;
+
+            if (pct) {
+                $('#gia-hoa').html('<del class="text-muted h6 mr-2">' + h.gia + '</del>' +
+                    giaBan.toLocaleString('en-US') + 'đ ' +
+                    '<span class="badge badge-danger align-middle ml-1" style="font-size:0.9rem;">-' + pct + '%</span>');
+            }
+
+            $('#btn-add').attr({
+                'data-id': id,
+                'data-name': h.ten,
+                'data-price': giaBan,
+                'data-img': h.anh
+            });
+        })();
     </script>
 </body>
 </html>
