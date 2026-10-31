@@ -1,0 +1,363 @@
+
+<header class="bg-light shadow-sm sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light py-2">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo 4.png" alt="Chạm Hoa" style="height: 50px; width: auto;">
+                </a>
+
+                <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active"><a class="nav-link font-weight-bold" href="index.html">Trang chủ</a></li>
+                        <li class="nav-item"><a class="nav-link font-weight-bold" href="products.html">Cửa hàng</a></li>
+                        <!-- Thêm mục Tin tức vào đây -->
+                        <li class="nav-item"><a class="nav-link font-weight-bold" href="news.html">Tin tức</a></li>
+                        <li class="nav-item"><a class="nav-link font-weight-bold" href="about.html">Về chúng tôi</a></li>
+                        <li class="nav-item"><a class="nav-link font-weight-bold" href="contact.html">Liên hệ</a></li>
+                    </ul>
+
+                    <!-- Khối Tìm Kiếm, Đăng Nhập & Giỏ Hàng -->
+                    <div class="d-flex align-items-center mt-3 mt-lg-0">
+                        <form class="form-inline position-relative mr-4" action="products.html">
+                            <input class="form-control rounded-pill search-input pr-5" type="search" placeholder="Tìm hoa sinh nhật..." style="width: 220px; font-size: 0.9rem;">
+                            <button class="btn btn-link position-absolute text-pink" type="submit" style="right: 5px; top: 0;"><i class="fas fa-search"></i></button>
+                        </form>
+                        
+                        <a href="#" class="text-dark text-decoration-none mr-3 font-weight-bold hover-pink" data-toggle="modal" data-target="#loginModal" title="Tài khoản">
+                            <i class="far fa-user fa-lg text-pink mr-1"></i><span class="d-none d-xl-inline small">Đăng nhập</span>
+                        </a>
+
+                        <a href="cart.html" class="position-relative text-decoration-none hover-pink" title="Giỏ hàng">
+                            <i class="fas fa-shopping-cart fa-lg text-pink"></i>
+                            <span class="badge badge-pill position-absolute cart-badge">0</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức & Mẹo vặt - Chạm Hoa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+
+<main class="container article-page py-5">
+
+    <!-- Đường dẫn điều hướng -->
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb bg-transparent px-0">
+            <li class="breadcrumb-item">
+                <a href="index.html">Trang chủ</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="news.html">Tin tức</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Hoa tốt nghiệp
+            </li>
+        </ol>
+    </nav>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+
+            <article>
+                <!-- Tiêu đề và thông tin bài viết -->
+                <header class="article-header text-center mb-4">
+                    <span class="article-category">
+                        HOA THEO CHỦ ĐỀ
+                    </span>
+
+                    <h1 class="article-title mt-3">
+                        Hướng Dẫn Chọn Hoa Cho Lễ Tốt Nghiệp:
+                        Ý Nghĩa Và Tone Phù Hợp
+                    </h1>
+
+                    <p class="text-muted small mt-3">
+                        <i class="far fa-calendar-alt text-pink mr-1"></i>
+                        25/10/2026
+                        <span class="mx-2">|</span>
+                        <i class="far fa-clock text-pink mr-1"></i>
+                        5 phút đọc
+                    </p>
+                </header>
+
+                <!-- Ảnh đại diện -->
+                <figure class="article-cover mb-4">
+                    <img
+                        src="images/topic tot nghiep.jpg"
+                        alt="Gợi ý hoa tặng lễ tốt nghiệp"
+                        class="img-fluid w-100">
+                    <figcaption class="text-muted small text-center mt-2">
+                        Một bó hoa tươi là lời chúc ý nghĩa cho hành trình mới.
+                    </figcaption>
+                </figure>
+
+                <!-- Nội dung bài viết -->
+                <div class="article-content">
+
+                    <p class="article-intro">
+                        Lễ tốt nghiệp là một trong những dấu mốc quan trọng
+                        trong cuộc đời mỗi người, đánh dấu sự trưởng thành
+                        sau hành trình học tập đầy nỗ lực. Vào ngày đặc biệt
+                        này, một bó hoa tươi không chỉ thể hiện lời chúc mừng,
+                        mà còn là món quà tinh tế chứa đựng nhiều thông điệp
+                        ý nghĩa. Việc lựa chọn loại hoa phù hợp, tone màu
+                        hài hòa và hình thức trình bày bắt mắt sẽ giúp bó hoa
+                        trở nên đáng nhớ và thể hiện trọn vẹn tình cảm
+                        của người tặng.
+                    </p>
+
+                    <p>
+                        Bài viết dưới đây từ Chạm Hoa sẽ hướng dẫn bạn
+                        cách chọn hoa tốt nghiệp phù hợp với từng đối tượng,
+                        hoàn cảnh và phong cách khác nhau.
+                    </p>
+
+                    <h2>Các loại hoa phù hợp tặng tốt nghiệp và ý nghĩa</h2>
+
+                    <p>
+                        <strong>🌻 Hoa hướng dương:</strong>
+                        Đại diện cho khát vọng, nghị lực và ánh sáng,
+                        tượng trưng cho sự bứt phá và tương lai tươi sáng.
+                    </p>
+
+                    <p>
+                        <strong>🌹 Hoa hồng:</strong>
+                        Hồng đỏ thể hiện sự nồng nhiệt và đam mê;
+                        hồng cam đại diện cho sự năng động, tự tin;
+                        hồng pastel mang nét nhẹ nhàng, tinh tế.
+                    </p>
+
+                    <p>
+                        <strong>🌸 Hoa lan:</strong>
+                        Biểu trưng cho trí tuệ, sự thành công và vẻ đẹp
+                        thanh cao. Rất phù hợp để tặng người tốt nghiệp
+                        bậc cao học, nghiên cứu sinh.
+                    </p>
+
+                    <p>
+                        <strong>🌼 Cúc mẫu đơn, hoa đồng tiền:</strong>
+                        Đại diện cho niềm vui, sự trân trọng và lời chúc
+                        may mắn, phát triển.
+                    </p>
+
+                    <p>
+                        <strong>🌷 Tulip:</strong>
+                        Hiện đại, phong cách và đầy hy vọng, phù hợp với
+                        các bạn trẻ yêu thích sự sáng tạo.
+                    </p>
+
+                    <h2>Cách chọn tone màu hoa theo giới tính và cá tính</h2>
+
+                    <h3>Đối với nữ tốt nghiệp</h3>
+                    <ul>
+                        <li><strong>Tone hồng pastel:</strong>
+                            nhẹ nhàng, nữ tính.</li>
+                        <li><strong>Tone tím:</strong>
+                            thể hiện sự sâu sắc, trưởng thành.</li>
+                        <li><strong>Tone vàng:</strong>
+                            năng động, rực rỡ và vui tươi.</li>
+                    </ul>
+
+                    <h3>Đối với nam tốt nghiệp</h3>
+                    <ul>
+                        <li><strong>Tone xanh – trắng:</strong>
+                            trẻ trung, lịch lãm.</li>
+                        <li><strong>Tone đỏ cam:</strong>
+                            cá tính, mạnh mẽ.</li>
+                    </ul>
+
+                    <p>
+                        <strong>Tham khảo thêm:</strong>
+                        <a href="products.html?cat=graduation">
+                            Mẫu hoa tone xanh dương
+                        </a>
+                    </p>
+
+                    <h3>Chọn hoa theo cá tính người nhận</h3>
+                    <ul>
+                        <li>
+                            <strong>Người nội tâm:</strong>
+                            nên chọn màu nhẹ, trầm như tím nhạt, trắng kem.
+                        </li>
+                        <li>
+                            <strong>Người năng động:</strong>
+                            tone rực như vàng, đỏ, cam tạo cảm giác nhiệt huyết.
+                        </li>
+                        <li>
+                            <strong>Người yêu nghệ thuật:</strong>
+                            có thể phối tone độc đáo như cam – xanh – tím.
+                        </li>
+                    </ul>
+
+                    <h2>Gợi ý chọn hoa theo ngành học hoặc bậc tốt nghiệp</h2>
+
+                    <ul>
+                        <li>
+                            <strong>🎓 Ngành y, dược:</strong>
+                            hoa lan trắng, lan hồ điệp, tượng trưng cho
+                            trí tuệ và sự tinh khiết.
+                        </li>
+                        <li>
+                            <strong>💼 Kinh tế – quản trị:</strong>
+                            hoa hồng cam, lan vũ nữ, đại diện cho thành công
+                            và phát triển.
+                        </li>
+                        <li>
+                            <strong>🎨 Nghệ thuật – thiết kế:</strong>
+                            tulip, hướng dương phối màu cá tính, sáng tạo.
+                        </li>
+                        <li>
+                            <strong>🧑‍🏫 Sư phạm:</strong>
+                            cúc mẫu đơn, cẩm tú cầu, biểu tượng tri thức
+                            và sự tôn trọng.
+                        </li>
+                        <li>
+                            <strong>🎖️ Bậc cao học, thạc sĩ:</strong>
+                            hoa lan hồ điệp, hồng Ecuador sang trọng,
+                            đẳng cấp.
+                        </li>
+                    </ul>
+
+                    <h2>Nên chọn bó hoa, giỏ hoa hay hộp hoa?</h2>
+
+                    <p>
+                        <strong>Bó hoa:</strong>
+                        phổ biến và dễ mang theo trong buổi lễ. Có thể chọn
+                        bó đứng, bó tròn hoặc bó dài nghệ thuật.
+                    </p>
+
+                    <p>
+                        <strong>Giỏ hoa:</strong>
+                        phù hợp nếu tặng tại nhà hoặc buổi tiệc chúc mừng
+                        sau lễ, thể hiện sự chỉn chu và trang trọng.
+                    </p>
+
+                    <p>
+                        <strong>Hộp hoa:</strong>
+                        hiện đại, sang trọng, dễ vận chuyển, phù hợp khi
+                        người tặng không thể trực tiếp tham dự.
+                    </p>
+
+                    <p>
+                        <strong>Hoa phối quà tặng:</strong>
+                        có thể kết hợp với gấu bông, ruy băng, thiệp chúc
+                        để tăng thêm phần ý nghĩa.
+                    </p>
+
+                    <h2>Một số lưu ý quan trọng khi chọn hoa tốt nghiệp</h2>
+
+                    <ul>
+                        <li>
+                            Nên chọn hoa tươi mới, có thể giữ được
+                            ít nhất 2–3 ngày.
+                        </li>
+                        <li>
+                            Ưu tiên các loại hoa có ý nghĩa tích cực,
+                            tránh hoa chia buồn hoặc tone màu quá u tối.
+                        </li>
+                        <li>
+                            Gửi kèm lời chúc tốt đẹp, thể hiện sự quan tâm
+                            chân thành.
+                        </li>
+                        <li>
+                            Nên đặt hoa trước ít nhất một ngày,
+                            đặc biệt vào mùa cao điểm.
+                        </li>
+                        <li>
+                            Chọn cửa hàng uy tín để đảm bảo chất lượng
+                            và giao hoa đúng giờ.
+                        </li>
+                    </ul>
+
+                    <h2>Lời kết</h2>
+
+                    <p>
+                        Một bó hoa tốt nghiệp không chỉ đơn thuần là món quà,
+                        mà còn là sự ghi nhận cho một hành trình học tập
+                        đầy nỗ lực. Việc chọn đúng loại hoa, màu sắc và
+                        hình thức sẽ thể hiện sự tinh tế và trân trọng
+                        của bạn dành cho người nhận.
+                    </p>
+
+                    <p>
+                        Hãy để Chạm Hoa đồng hành cùng bạn chuẩn bị
+                        bó hoa ý nghĩa nhất, trao gửi lời chúc tốt đẹp
+                        cho một chặng đường mới.
+                    </p>
+
+                </div>
+
+                <!-- Nút quay lại -->
+                <div class="article-bottom mt-5 pt-4 border-top">
+                    <a href="news.html" class="btn custom-btn rounded-pill px-4">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        Quay lại Tin tức
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</main>
+
+
+  <footer class="bg-light pt-5 border-top mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="index.html" class="text-decoration-none">
+                        <h3 class="brand-text mb-3">Chạm Hoa</h3>
+                    </a>
+                    <p class="text-muted small mb-2"><i class="fas fa-map-marker-alt mr-2 text-pink"></i>Học viện Ngân hàng, 12 Chùa Bộc, Hà Nội</p>
+                    <p class="text-muted small mb-2"><i class="fas fa-phone-alt mr-2 text-pink"></i>Hotline: 1900 2006</p>
+                    <p class="text-muted small mb-2"><i class="fas fa-envelope mr-2 text-pink"></i>Email: cskh@chamhoa.vn</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="font-weight-bold mb-3 text-dark">HỖ TRỢ KHÁCH HÀNG</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-pink">Hướng dẫn đặt hàng</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-pink">Phương thức thanh toán</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-pink">Chính sách giao hàng</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="font-weight-bold mb-3 text-dark">DANH MỤC</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none hover-pink">Hoa tình yêu</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none hover-pink">Hoa tốt nghiệp</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none hover-pink">Hoa khai trương</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="font-weight-bold mb-3 text-dark">Nhận khuyến mãi</h6>
+                    <form class="d-flex mb-4">
+                        <input type="email" class="form-control form-control-sm mr-2" placeholder="Nhập email...">
+                        <button class="btn btn-sm text-white custom-btn" type="submit">Gửi</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="py-3 mt-2" style="background-color: #2c2c2c;">
+            <div class="container text-center text-white-50">
+                <p class="small mb-0">© 2026 Chạm Hoa </p>
+            </div>
+        </div>
+    </footer>
+
