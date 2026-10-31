@@ -115,3 +115,194 @@ body {
 /* Footer Hover */
 .hover-pink { transition: all 0.2s ease; }
 .hover-pink:hover { color: var(--dark-pink) !important; text-decoration: none; padding-left: 5px; }
+
+/* =====================================
+   TRANG DANH SÁCH TIN TỨC
+===================================== */
+
+.news-page {
+    min-height: 60vh;
+}
+
+.news-card {
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.news-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.news-card:hover img {
+    transform: scale(1.04);
+}
+
+.news-card .card-title {
+    line-height: 1.5;
+}
+
+.news-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.news-card .card-body > a:last-child {
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+
+/* =====================================
+   TRANG ĐỌC CHI TIẾT BÀI VIẾT
+===================================== */
+
+.article-page {
+    max-width: 1140px;
+}
+
+.article-page .breadcrumb-item a {
+    color: var(--dark-pink);
+    text-decoration: none;
+}
+
+.article-page .breadcrumb-item.active {
+    color: #817176;
+}
+
+.article-header {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.article-category {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 30px;
+    background-color: var(--soft-pink);
+    color: #8f3e59;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.article-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    line-height: 1.4;
+    font-weight: 700;
+    color: var(--dark-pink);
+}
+
+.article-cover {
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.article-cover img {
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.article-cover figcaption {
+    font-style: italic;
+}
+
+.article-content {
+    font-size: 1.05rem;
+    line-height: 1.95;
+    color: var(--text-color);
+    overflow-wrap: break-word;
+}
+
+.article-content p {
+    margin-bottom: 1.25rem;
+}
+
+.article-content h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-pink);
+    font-size: 1.7rem;
+    line-height: 1.5;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.article-content h3 {
+    font-family: 'Playfair Display', serif;
+    color: #8f5365;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.article-content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.article-content li {
+    margin-bottom: 0.6rem;
+}
+
+.article-content a {
+    color: var(--dark-pink);
+    font-weight: 700;
+}
+
+.article-content a:hover {
+    color: #b8506d;
+    text-decoration: underline;
+}
+
+.article-intro {
+    font-size: 1.12rem;
+    font-weight: 600;
+}
+
+.article-bottom {
+    padding-bottom: 1rem;
+}
+
+
+/* =====================================
+   RESPONSIVE: ĐIỆN THOẠI
+===================================== */
+
+@media (max-width: 767.98px) {
+    .section-title {
+        font-size: 1.7rem !important;
+    }
+
+    .article-title {
+        font-size: 1.8rem;
+    }
+
+    .article-content {
+        font-size: 1rem;
+        line-height: 1.85;
+    }
+
+    .article-content h2 {
+        font-size: 1.45rem;
+        margin-top: 2rem;
+    }
+
+    .article-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .article-cover img {
+        max-height: 350px;
+    }
+
+    .news-card img {
+        height: 200px;
+    }
+}
