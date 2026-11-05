@@ -180,14 +180,9 @@ $(document).ready(function () {
     var BANK_OWNER = 'CHAM HOA';        // tên chủ tài khoản (không dấu)
     var WALLET_PHONE = '0900000000';    // số ví điện tử nhận tiền
 
-    var TIME_SLOTS = [
-        { label: '08:00 - 10:00', start: 8 },
-        { label: '10:00 - 12:00', start: 10 },
-        { label: '12:00 - 14:00', start: 12 },
-        { label: '14:00 - 16:00', start: 14 },
-        { label: '16:00 - 18:00', start: 16 },
-        { label: '18:00 - 20:00', start: 18 }
-    ];
+    var DELIVER_FROM = '08:00';         // giờ giao sớm nhất
+    var DELIVER_TO = '20:00';           // giờ giao muộn nhất
+    var MIN_LEAD_HOURS = 2;             // đơn giao trong ngày phải đặt trước ít nhất bấy nhiêu tiếng
     var PAY_NAMES = {
         cod: 'Thanh toán khi nhận hàng (COD)',
         qr: 'Chuyển khoản QR ngân hàng',
@@ -207,19 +202,29 @@ $(document).ready(function () {
         return { subtotal: subtotal, ship: ship, total: subtotal + ship };
     }
 
-    // Tạo khung giờ; nếu chọn giao hôm nay thì khóa các khung giờ quá gấp (cần cách hiện tại ít nhất 2 tiếng)
-    function refreshSlots() {
-        var date = $('#deliver-date').val();
-        var now = new Date();
-        var isToday = (date === toYMD(now));
-        var $sel = $('#deliver-time');
-        var current = $sel.val();
-        $sel.empty().append('<option value="">-- Chọn khung giờ --</option>');
-        TIME_SLOTS.forEach(function (s) {
-            var off = isToday && (s.start - now.getHours() < 2);
-            $sel.append('<option value="' + s.label + '"' + (off ? ' disabled' : '') + '>' + s.label + (off ? ' (đã quá gấp)' : '') + '</option>');
-        });
-        if (current && $sel.find('option[value="' + current + '"]:not(:disabled)').length) $sel.val(current);
+    // Kiểm tra giờ nhận hoa khách chọn (giờ cụ thể, ví dụ 11:15)
+    function validateDeliverTime() {
+        var el = document.getElementById('deliver-time');
+        if (!el) return;
+        var time = el.value;
+        var msg = '';
+        var feedback = 'Vui lòng chọn giờ nhận hoa.';
+        if (time) {
+            if (time < DELIVER_FROM || time > DELIVER_TO) {
+                msg = 'Shop giao hoa từ ' + DELIVER_FROM + ' đến ' + DELIVER_TO + '.';
+            } else if ($('#deliver-date').val() === toYMD(new Date())) {
+                // Giao trong hôm nay: phải cách hiện tại tối thiểu MIN_LEAD_HOURS tiếng
+                var earliest = new Date(Date.now() + MIN_LEAD_HOURS * 3600000);
+                if (earliest.getDate() !== new Date().getDate() || ('0' + earliest.getHours()).slice(-2) + ':' + ('0' + earliest.getMinutes()).slice(-2) > DELIVER_TO) {
+                    msg = 'Hôm nay đã quá giờ nhận đơn giao trong ngày, vui lòng chọn ngày mai.';
+                } else {
+                    var earliestStr = ('0' + earliest.getHours()).slice(-2) + ':' + ('0' + earliest.getMinutes()).slice(-2);
+                    if (time < earliestStr) msg = 'Giao trong hôm nay cần đặt trước ' + MIN_LEAD_HOURS + ' tiếng, sớm nhất là ' + earliestStr + '.';
+                }
+            }
+        }
+        el.setCustomValidity(msg);
+        $('#deliver-time-feedback').text(msg || feedback);
     }
 
     function updatePaymentPanel() {
@@ -292,9 +297,10 @@ $(document).ready(function () {
                       <div class="invalid-feedback">Vui lòng chọn ngày nhận từ hôm nay trở đi.</div>
                     </div>
                     <div class="form-group col-md-6">
-                      <label class="small font-weight-bold text-muted">Khung giờ nhận hoa *</label>
-                      <select id="deliver-time" class="form-control" required></select>
-                      <div class="invalid-feedback">Vui lòng chọn khung giờ nhận hoa.</div>
+                      <label class="small font-weight-bold text-muted">Giờ nhận hoa *</label>
+                      <input type="time" id="deliver-time" class="form-control" min="${DELIVER_FROM}" max="${DELIVER_TO}" required>
+                      <div class="invalid-feedback" id="deliver-time-feedback">Vui lòng chọn giờ nhận hoa.</div>
+                      <small class="form-text text-muted">Chọn giờ cụ thể (ví dụ 11:15), trong khoảng ${DELIVER_FROM} - ${DELIVER_TO}. Đơn giao trong ngày cần đặt trước ${MIN_LEAD_HOURS} tiếng.</small>
                     </div>
                   </div>
 
@@ -368,7 +374,7 @@ $(document).ready(function () {
           </div>
         </div>`;
         $('body').append(html);
-        refreshSlots();
+        validateDeliverTime();
     }
 
     // Bấm nút "Xác nhận thanh toán" -> mở form
@@ -382,7 +388,7 @@ $(document).ready(function () {
         $('#checkoutModal').modal('show');
     });
 
-    $(document).on('change', '#deliver-date', refreshSlots);
+    $(document).on('input change', '#deliver-date, #deliver-time', validateDeliverTime);
     $(document).on('change', 'input[name="pay"]', updatePaymentPanel);
     $(document).on('input', '#card-message', function () { $('#card-count').text($(this).val().length); });
     $(document).on('hidden.bs.modal', '#checkoutModal', function () {
