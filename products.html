@@ -43,8 +43,10 @@
                     <!-- Khối Tìm Kiếm, Đăng Nhập & Giỏ Hàng -->
                     <div class="d-flex align-items-center mt-3 mt-lg-0">
                         <form class="form-inline position-relative mr-4" onsubmit="return false;">
-                            <input class="form-control rounded-pill search-input pr-5" type="search" id="search-input" placeholder="Tìm hoa sinh nhật..." style="width: 220px; font-size: 0.9rem;">
-                            <button class="btn btn-link position-absolute text-pink" type="submit" style="right: 5px; top: 0;"><i class="fas fa-search"></i></button>
+                            <input class="form-control rounded-pill search-input pr-5" type="search" id="search-input" placeholder="Tìm loài hoa, màu sắc..." style="width: 300px; font-size: 0.9rem;">
+                            <button class="btn btn-link position-absolute text-pink" type="button" style="right: 5px; top: 0;">
+                                <i class="fas fa-search"></i>
+                            </button>
                         </form>
                         
                         <a href="#" class="text-dark text-decoration-none mr-3 font-weight-bold hover-pink" data-toggle="modal" data-target="#loginModal" title="Tài khoản">
@@ -101,7 +103,7 @@
                     <!-- ================================== -->
                     <!-- NHÓM 1: HOA TÌNH YÊU-->
                     <!-- ================================== -->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu top-ban" data-price="520000" data-order="1" >
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu top-ban" data-price="520000" data-color="hồng" data-loaihoa="hoa mao lương, tulip" data-order="1" >
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=ngot-ngao"><img src="images/topic tinh yeu.png" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -111,7 +113,7 @@
                         </div>
                     </div>
                     <!--SP1-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="600000" data-order="2">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="600000" data-color="hồng" data-loaihoa="hoa ly" data-order="2">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=nang-tho"><img src="images/tinh yeu 1.png" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -121,7 +123,7 @@
                         </div>
                     </div>
                     <!--SP2-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu khuyen-mai" data-price="238000" data-order="3">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu khuyen-mai" data-price="238000" data-color="hồng" data-loaihoa="hoa hồng" data-order="3">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=mong-mo"><img src="images/tinh yeu 2.png" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -134,7 +136,7 @@
                         </div>
                     </div>
                     <!--SP3-->
-                     <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu khuyen-mai" data-price="315000" data-order="4">
+                     <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu khuyen-mai" data-price="315000" data-color="hồng" data-loaihoa="hoa hồng" data-order="4">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=diu-dang"><img src="images/tinh yeu 3.png" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -147,7 +149,7 @@
                         </div>
                     </div>
                     <!--SP4-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="800000" data-order="5">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="800000" data-color="đỏ" data-loaihoa="hoa hồng" data-order="5">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=ruc-chay"><img src="images/tinh yeu 4.jpg" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -157,7 +159,7 @@
                         </div>
                     </div>
                     <!--SP5-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="650000" data-order="6">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="650000" data-color="đỏ" data-loaihoa="hoa hồng"data-order="6">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=chung-thuy"><img src="images/tinh yeu 5.jpg" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -167,7 +169,7 @@
                         </div>
                     </div>
                     <!--SP6-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu khuyen-mai" data-price="280000" data-order="7">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu khuyen-mai" data-price="280000" data-color="hồng vàng" data-loaihoa="hoa hồng, hoa đồng tiền" data-order="7">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=nang-mai"><img src="images/tinh yeu 6.jpg" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -180,7 +182,7 @@
                         </div>
                     </div>
                     <!--SP7-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="320000" data-order="8">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="320000" data-color="hồng mix vàng" data-loaihoa="hoa hồng, hoa đồng tiền" data-order="8">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=tuoi-sang"><img src="images/tinh yeu 7.jpg" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -190,7 +192,7 @@
                         </div>
                     </div>
                     <!--SP8-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="3650000" data-order="9">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="3650000" data-color="tím" data-loaihoa="hoa hồng, hoa lan" data-order="9">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=hoang-hon-tim"><img src="images/tinh yeu 8.jpg" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -200,7 +202,7 @@
                         </div>
                     </div>
                     <!--SP9-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu top-ban" data-price="350000" data-order="10">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu top-ban" data-price="350000" data-color="vàng" data-loaihoa="hoa hồng" data-order="10">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=nang-vang"><img src="images/tinh yeu 9.jpg" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -210,7 +212,7 @@
                         </div>
                     </div>
                     <!--SP10-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="385000" data-order="11">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="385000" data-color="hồng mix vàng" data-loaihoa="hoa hồng" data-order="11">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=cau-vong"><img src="images/tinh yeu 10.jpg" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -220,7 +222,7 @@
                         </div>
                     </div>
                     <!--SP11-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="850000" data-order="12">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="850000" data-color="trắng mix tím" data-loaihoa="Hoa hồng tím, hoa lan trắng"data-order="12">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=mong-tim"><img src="images/tinh yeu 11.jpg" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -230,7 +232,7 @@
                         </div>
                     </div>
                     <!--SP12-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu top-ban" data-price="1390000" data-order="13">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu top-ban" data-price="1390000"data-color="hồng" data-loaihoa="hoa tulip" data-order="13">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=nu-hon-hong"><img src="images/tinh yeu 12.jpg" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -240,7 +242,7 @@
                         </div>
                     </div>
                     <!--SP13-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="2380000" data-order="14">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="2380000" data-color="đỏ" data-loaihoa="hoa hồng" data-order="14">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=dam-say"><img src="images/tinh yeu 13.jpg" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -250,7 +252,7 @@
                         </div>
                     </div>
                     <!--SP14-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="250000" data-order="15">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="250000" data-color="hồng" data-loaihoa="hoa cẩm chướng" data-order="15">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=em-diu"><img src="images/tinh yeu 14.jpg" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -260,7 +262,7 @@
                         </div>
                     </div>
                     <!--SP15-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="320000" data-order="16">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tinh-yeu" data-price="320000" data-color="hồng" data-loaihoa="hoa hồng" data-order="16">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=yeu-em"><img src="images/tinh yeu 15.jpg" class="card-img-top" alt="Mộng Mơ"></a>
                             <div class="card-body text-center p-3">
@@ -273,7 +275,7 @@
                     <!-- ================================== -->
                     <!-- NHÓM 2: HOA TỐT NGHIỆP -->
                     <!-- ================================== -->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep" data-price="220000" data-order="17">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep" data-price="220000" data-color="hồng mix trắng" data-loaihoa="hoa hồng" data-order="17">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=uoc-mo"><img src="images/topic tot nghiep.jpg" class="card-img-top" alt="Hướng Dương"></a>
                             <div class="card-body text-center p-3">
@@ -283,7 +285,7 @@
                         </div>
                     </div>
                     <!--SP1-->
-                     <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep top-ban" data-price="200000" data-order="18">
+                     <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep top-ban" data-price="200000" data-color="hồng" data-loaihoa="hoa hồng" data-order="18">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=thanh-xuan"><img src="images/tot nghiep 1.jpg" class="card-img-top" alt="Hướng Dương"></a>
                             <div class="card-body text-center p-3">
@@ -293,7 +295,7 @@
                         </div>
                     </div>
                     <!--SP2-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep" data-price="400000" data-order="19">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep" data-price="400000"  data-color="hồng mix xanh" data-loaihoa="hoa hồng" data-order="19">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=suc-song"><img src="images/tot nghiep 2.jpg" class="card-img-top" alt="Hướng Dương"></a>
                             <div class="card-body text-center p-3">
@@ -303,7 +305,7 @@
                         </div>
                     </div>
                     <!--SP3-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep" data-price="290000" data-order="20">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep" data-price="290000" data-color="trắng mix xanh" data-loaihoa="hoa cát tường" data-order="20">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=tuoi-tre"><img src="images/tot nghiep 3.jpg" class="card-img-top" alt="Hướng Dương"></a>
                             <div class="card-body text-center p-3">
@@ -313,7 +315,7 @@
                         </div>
                     </div>
                     <!--SP4-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep" data-price="160000" data-order="21">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep" data-price="160000" data-color="xanh" data-loaihoa="hoa cẩm tú cầu" data-order="21">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=may-troi"><img src="images/tot nghiep 4.jpg" class="card-img-top" alt="Hướng Dương"></a>
                             <div class="card-body text-center p-3">
@@ -323,7 +325,7 @@
                         </div>
                     </div>
                     <!--SP5-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep" data-price="260000" data-order="22">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep" data-price="260000" data-color=" trắng mix tím" data-loaihoa="hoa cẩm chướng, hoa phi yến" data-order="22">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=tho-ngay"><img src="images/tot nghiep 5.jpg" class="card-img-top" alt="Hướng Dương"></a>
                             <div class="card-body text-center p-3">
@@ -333,7 +335,7 @@
                         </div>
                     </div>
                     <!--SP6-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep" data-price="360000" data-order="23">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep" data-price="360000" data-color=" trắng mix xanh" data-loaihoa=" hoa cẩm chướng, hoa lan hồ điệp" data-order="23">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=nhiet-huyet"><img src="images/tot nghiep 6.jpg" class="card-img-top" alt="Hướng Dương"></a>
                             <div class="card-body text-center p-3">
@@ -343,7 +345,7 @@
                         </div>
                     </div>
                     <!--SP7-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep khuyen-mai" data-price="300000" data-order="24">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep khuyen-mai" data-price="300000" data-color="vàng" data-loaihoa="hoa hồng" data-order="24">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=cang-tran"><img src="images/tot nghiep 7.jpg" class="card-img-top" alt="Hướng Dương"></a>
                             <div class="card-body text-center p-3">
@@ -356,7 +358,7 @@
                         </div>
                     </div>
                     <!--SP8-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep" data-price="200000" data-order="25">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep" data-price="200000" data-color="vàng" data-loaihoa="hoa hồng" data-order="25">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=anh-duong"><img src="images/tot nghiep 8.jpg" class="card-img-top" alt="Hướng Dương"></a>
                             <div class="card-body text-center p-3">
@@ -366,7 +368,7 @@
                         </div>
                     </div>
                     <!--SP9-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep top-ban" data-price="200000" data-order="26">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep top-ban" data-price="200000" data-color="vàng" data-loaihoa="hoa hướng dương" data-order="26">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=ruc-ro"><img src="images/tot nghiep 9.jpg" class="card-img-top" alt="Hướng Dương"></a>
                             <div class="card-body text-center p-3">
@@ -376,7 +378,7 @@
                         </div>
                     </div>
                     <!--SP10-->
-                   <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep khuyen-mai" data-price="340000" data-order="27">
+                   <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep khuyen-mai" data-price="340000"  data-color="hồng mix trắng" data-loaihoa="hoa hồng" data-order="27">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=tuoi-sang-2"><img src="images/tot nghiep 10.jpg" class="card-img-top" alt="Hướng Dương"></a>
                             <div class="card-body text-center p-3">
@@ -389,7 +391,7 @@
                         </div>
                     </div> 
                     <!--SP11-->
-                        <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep khuyen-mai" data-price="340000" data-order="28">
+                        <div class="col-md-4 col-6 mb-4 product-item" data-category="tot-nghiep khuyen-mai" data-price="340000" data-color="xanh" data-loaihoa="hoa hồng" data-order="28">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=hy-vong"><img src="images/tot nghiep 11.jpg" class="card-img-top" alt="Hướng Dương"></a>
                             <div class="card-body text-center p-3">
@@ -405,7 +407,7 @@
                     <!-- ================================== -->
                     <!-- NHÓM 3: HOA KHAI TRƯƠNG -->
                     <!-- ================================== -->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="850000" data-order="29">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="850000" data-color="hồng" data-loaihoa="hoa hồng" data-order="29">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=phat-tai"><img src="images/topic khai truong.jpg" class="card-img-top" alt="Phát Tài"></a>
                             <div class="card-body text-center p-3">
@@ -415,7 +417,7 @@
                         </div>
                     </div>
                     <!-- SP1 -->
-                     <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong top-ban" data-price="950000" data-order="30">
+                     <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong top-ban" data-price="950000" data-color="hồng mix trắng" data-loaihoa=" hoa hồng, hoa tulip, hoa lan, hoa cẩm tú cầu" data-order="30">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=phu-quy"><img src="images/khai truong 1.jpg" class="card-img-top" alt="Phát Tài"></a>
                             <div class="card-body text-center p-3">
@@ -425,7 +427,7 @@
                         </div>
                     </div>
                     <!--SP2-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="680000" data-order="31">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="680000"  data-color="xanh mix trắng" data-loaihoa=" hoa hồng, hoa đồng tiền, hoa cẩm chướng" data-order="31">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=khai-hoa"><img src="images/khai truong 2.jpg" class="card-img-top" alt="Phát Tài"></a>
                             <div class="card-body text-center p-3">
@@ -435,7 +437,7 @@
                         </div>
                     </div>
                     <!--SP3-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="520000" data-order="32">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="520000" data-color="vàng" data-loaihoa="hoa hướng dương" data-order="32">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=thinh-vuong"><img src="images/khai truong 3.jpg" class="card-img-top" alt="Phát Tài"></a>
                             <div class="card-body text-center p-3">
@@ -445,7 +447,7 @@
                         </div>
                     </div>
                     <!--SP4-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong top-ban" data-price="800000" data-order="33">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong top-ban" data-price="800000" data-color="hồng" data-loaihoa="hoa hồng, hoa tulip,hoa cẩm tú cầu" data-order="33">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=hong-phat"><img src="images/khai truong 4.jpg" class="card-img-top" alt="Phát Tài"></a>
                             <div class="card-body text-center p-3">
@@ -455,7 +457,7 @@
                         </div>
                     </div>      
                     <!--SP5-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong top-ban" data-price="720000" data-order="34">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong top-ban" data-price="720000" data-color="trắng mix hồng " data-loaihoa="hoa hồng, hoa lan" data-order="34">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=khai-sac"><img src="images/khai truong 5.jpg" class="card-img-top" alt="Phát Tài"></a>
                             <div class="card-body text-center p-3">
@@ -465,7 +467,7 @@
                         </div>
                     </div>
                     <!--SP6-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="880000" data-order="35">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="880000" data-color="hồng" data-loaihoa="hoa hồng, hoa lan, hoa cẩm chướng" data-order="35">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=van-loc"><img src="images/khai truong 6.jpg" class="card-img-top" alt="Phát Tài"></a>
                             <div class="card-body text-center p-3">
@@ -475,7 +477,7 @@
                         </div>
                     </div> 
                     <!--SP7-->
-                   <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong khuyen-mai" data-price="660000" data-order="36">
+                   <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong khuyen-mai" data-price="660000" data-color="trắng mix tím" data-loaihoa="hoa hồng, hoa cúc mẫu đơn" data-order="36">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=cat-tuong"><img src="images/khai truong 7.jpg" class="card-img-top" alt="Phát Tài"></a>
                             <div class="card-body text-center p-3">
@@ -488,7 +490,7 @@
                         </div>   
                     </div>
                     <!--SP8-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="850000" data-order="37">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="850000" data-color="cam mix vàng" data-loaihoa="hoa hồng, hoa cúc mẫu đơn" data-order="37">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=thanh-cong"><img src="images/khai truong 8.jpg" class="card-img-top" alt="Phát Tài"></a>
                             <div class="card-body text-center p-3">
@@ -498,7 +500,7 @@
                         </div>   
                     </div>
                     <!--SP9-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="1500000" data-order="38">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="1500000" data-color="đỏ mix trắng" data-loaihoa="hoa hồng, hoa lan" data-order="38">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=hung-thinh"><img src="images/khai truong 9.jpg" class="card-img-top" alt="Phát Tài"></a>
                             <div class="card-body text-center p-3">
@@ -508,7 +510,7 @@
                         </div>
                     </div>
                     <!--SP10-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="1599000" data-order="39">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="1599000" data-color="xanh mix trắng" data-loaihoa="hoa lan, hoa cúc mẫu đơn" data-order="39">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=nhu-y"><img src="images/khai truong 10.jpg" class="card-img-top" alt="Phát Tài"></a>
                             <div class="card-body text-center p-3">
@@ -518,7 +520,7 @@
                         </div>  
                     </div>
                     <!--SP11-->
-                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="1199000" data-order="40">
+                    <div class="col-md-4 col-6 mb-4 product-item" data-category="khai-truong" data-price="1199000" data-color="trắng mix xanh" data-loaihoa="hoa hồng, hoa lan, hoa đồng tiền" data-order="40">
                         <div class="card product-card border-0 shadow-sm h-100">
                             <a href="chi-tiet-sp.html?id=phat-loc"><img src="images/khai truong 11.jpg" class="card-img-top" alt="Phát Tài"></a>
                             <div class="card-body text-center p-3">
@@ -596,17 +598,97 @@
 <script src="cart.js"></script>
 <script>
     $(document).ready(function() {
+        // ==========================================
+        // 1. HÀM XỬ LÝ LỌC SẢN PHẨM ĐỘC LẬP (TRÁNH LỖI)
+        // ==========================================
+        function hienThiDanhMuc(category) {
+            // Đổi màu chữ menu
+            $('.category-link').removeClass('text-dark font-weight-bold').addClass('text-muted');
+            $('.category-link[data-filter="' + category + '"]').removeClass('text-muted').addClass('text-dark font-weight-bold');
+
+            // Ẩn/hiện bó hoa
+            if (category === 'all') {
+                $('.product-item').attr('style', 'display: block !important;');
+            } else {
+                $('.product-item').each(function() {
+                    var itemCategories = $(this).attr('data-category') || "";
+                    if (itemCategories.includes(category)) {
+                        $(this).attr('style', 'display: block !important;');
+                    } else {
+                        $(this).attr('style', 'display: none !important;');
+                    }
+                });
+            }
+        }
 
         // ==========================================
-        // 1. CHỨC NĂNG TÌM KIẾM THEO TÊN HOA
+        // 2. PHỤC HỒI TRÍ NHỚ NGAY KHI VỪA MỞ TRANG
+        // ==========================================
+       // A. Phục hồi từ khóa tìm kiếm (nếu khách đi từ trang chi tiết về)
+      //  var tuKhoaCu = localStorage.getItem('nhoTuKhoa');
+      //  if (tuKhoaCu && tuKhoaCu !== "") {
+            // Điền từ khóa vào ô
+      //      $('#search-input').val(tuKhoaCu);
+            
+            // Xóa từ khóa trong bộ nhớ đi để lần sau khách F5 không bị kẹt lại chữ này
+      //      localStorage.removeItem('nhoTuKhoa'); 
+            
+            // Bắt buộc ưu tiên về danh mục "Tất cả" để tìm kiếm diện rộng
+      //      localStorage.setItem('nhoDanhMuc', 'all');
+      //      hienThiDanhMuc('all');
+
+            // "Bóp cò" tự động chạy hàm tìm kiếm chữ
+     //       $('#search-input').trigger('input');
+    //    } 
+    //    else { 
+        // B. Đọc lại danh mục khách vừa xem (nếu không có thì mặc định hiển thị tất cả 'all')
+        var danhMucCu = localStorage.getItem('nhoDanhMuc') || 'all';
+        hienThiDanhMuc(danhMucCu); // Gọi hàm để chạy ngay lập tức
+     //   }
+        // ==========================================
+        // 3. KHI KHÁCH HÀNG BẤM VÀO DANH MỤC TRÊN MENU
+        // ==========================================
+        $('.category-link').click(function(e) {
+            e.preventDefault();
+            $('#search-input').val(''); // Xóa ô tìm kiếm cho gọn
+
+            var category = $(this).attr('data-filter');
+            
+            // GHI NHỚ VÀO TRÌNH DUYỆT
+            localStorage.setItem('nhoDanhMuc', category);
+            
+            // Gọi hàm lọc hoa
+            hienThiDanhMuc(category);
+        });
+       
+        // ==========================================
+        // 4. TÌM KIẾM THÔNG MINH (THEO TÊN + MÀU + LOÀI HOA)
         // ==========================================
         $('#search-input').on('keyup input change search', function() {
             var keyword = $(this).val().toLowerCase().trim();
 
             $('.product-item').each(function() {
-                var productText = $(this).text().toLowerCase();
-                // Sử dụng !important để đè lên các class của Bootstrap
-                if (keyword === '' || productText.indexOf(keyword) !== -1) {
+                // Lấy tất cả thông tin của bó hoa để gộp thành 1 chuỗi dài
+                var productName = $(this).text().toLowerCase();
+                var productColor = $(this).attr('data-color') ? $(this).attr('data-color').toLowerCase() : "";
+                var productSpecies = $(this).attr('data-loaihoa') ? $(this).attr('data-loaihoa').toLowerCase() : "";
+                
+                // Chuỗi tổng hợp chứa: Tên hiển thị + Nhãn Màu + Nhãn Loài Hoa
+                var allText = productName + " " + productColor + " " + productSpecies;
+
+                // Tách từ khóa khách gõ thành từng chữ (VD: "hồng vàng" -> ["hồng", "vàng"])
+                var words = keyword.split(" ");
+                var match = true;
+
+                // Kiểm tra xem TẤT CẢ các chữ khách gõ có nằm trong chuỗi tổng hợp không
+                for (var i = 0; i < words.length; i++) {
+                    if (words[i] !== "" && allText.indexOf(words[i]) === -1) {
+                        match = false; // Chỉ cần 1 chữ không khớp là loại luôn bó hoa này
+                        break;
+                    }
+                }
+
+                if (match) {
                     $(this).attr('style', 'display: block !important;');
                 } else {
                     $(this).attr('style', 'display: none !important;');
@@ -615,25 +697,22 @@
         });
 
         // ==========================================
-        // 2. CHỨC NĂNG LỌC THEO DANH MỤC (MENU TRÁI)
+        // 5. LỌC THEO DANH MỤC (MENU TRÁI)
         // ==========================================
         $('.category-link').click(function(e) {
             e.preventDefault();
             $('.category-link').removeClass('text-dark font-weight-bold').addClass('text-muted');
             $(this).removeClass('text-muted').addClass('text-dark font-weight-bold');
 
-            $('#search-input').val(''); // Xóa ô tìm kiếm
+            $('#search-input').val(''); // Reset ô tìm kiếm
 
-            var category = $(this).attr('data-filter'); // Ví dụ: 'khuyen-mai'
+            var category = $(this).attr('data-filter');
             
             if (category === 'all') {
                 $('.product-item').attr('style', 'display: block !important;');
             } else {
                 $('.product-item').each(function() {
-                    // Lấy ra tất cả nhãn danh mục của hoa này (vd: "tinh-yeu khuyen-mai")
                     var itemCategories = $(this).attr('data-category') || "";
-
-                    // Kiểm tra xem danh mục đang bấm có nằm trong chuỗi nhãn của hoa không
                     if (itemCategories.includes(category)) {
                         $(this).attr('style', 'display: block !important;');
                     } else {
@@ -644,7 +723,7 @@
         });
 
         // ==========================================
-        // 3. CHỨC NĂNG SẮP XẾP THEO GIÁ (MENU PHẢI)
+        // 6. CHỨC NĂNG SẮP XẾP THEO GIÁ (MENU PHẢI)
         // ==========================================
         $('#sort-price').change(function() {
             var sortOption = $(this).val();
@@ -668,7 +747,6 @@
             // Cập nhật lại giao diện sau khi sắp xếp
             $('#product-list').append($items);
         });
-
     });
 </script>
 </body>

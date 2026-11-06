@@ -42,34 +42,17 @@
 
                     <!-- Khối Tìm Kiếm, Đăng Nhập & Giỏ Hàng -->
                     <div class="d-flex align-items-center mt-3 mt-lg-0">
-                        <form class="form-inline position-relative mr-4" action="products.html">
-                            <input class="form-control rounded-pill search-input pr-5" type="search" placeholder="Tìm hoa sinh nhật..." style="width: 220px; font-size: 0.9rem;">
-                            <button class="btn btn-link position-absolute text-pink" type="submit" style="right: 5px; top: 0;"><i class="fas fa-search"></i></button>
-                        </form>
-                        
-                       <!--- <a href="#" class="text-dark text-decoration-none mr-3 font-weight-bold hover-pink" data-toggle="modal" data-target="#loginModal" title="Tài khoản">
-                            <i class="far fa-user fa-lg text-pink mr-1"></i><span class="d-none d-xl-inline small">Đăng nhập</span>
-                        </a> -->
-
+                        <form class="form-inline position-relative mr-4" onsubmit="return false;">
+                            <input class="form-control rounded-pill search-input pr-5" type="search" id="search-input" placeholder="Tìm loài hoa, màu sắc..." style="width: 300px; font-size: 0.9rem;">
+                            <button class="btn btn-link position-absolute text-pink" type="button" style="right: 5px; top: 0;">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>      
                         <a href="cart.html" class="position-relative text-decoration-none hover-pink" title="Giỏ hàng">
                             <i class="fas fa-shopping-cart fa-lg text-pink"></i>
                             <span class="badge badge-pill position-absolute cart-badge">0</span>
                         </a>
                     </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Menu -->
-    <header class="bg-light shadow-sm sticky-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light py-2">
-                <a class="navbar-brand font-weight-bold text-pink" href="index.html">CHẠM HOA</a>
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a class="nav-link font-weight-bold" href="products.html">Quay lại Cửa hàng</a></li>
-                    </ul>
                 </div>
             </nav>
         </div>
@@ -114,6 +97,13 @@
                         <i class="fas fa-cart-plus mr-1"></i>Thêm vào giỏ hàng
                     </button>
                     <a href="cart.html" class="btn btn-outline-secondary rounded-pill px-4 py-2 ml-2">Xem giỏ hàng</a>
+                </div>
+                <!-- Nút quay lại -->
+                <div class="article-bottom mt-5 pt-4 border-top">
+                    <a href="products.html" class="btn custom-btn rounded-pill px-4">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        Quay lại Cửa hàng
+                    </a>
                 </div>
             </div>
         </div>
@@ -181,7 +171,7 @@
                 gia: "520,000đ", 
                 anh: "images/topic tinh yeu.png", 
                 moTa: "Ngọt Ngào là sự kết hợp của những gam màu hồng dịu dàng, mang đến cảm giác nhẹ nhàng và đầy yêu thương. Hoa hồng tượng trưng cho tình yêu chân thành, mao lương mang vẻ đẹp duyên dáng cùng sức hút riêng, còn tulip gửi gắm sự trân trọng và những tình cảm sâu sắc. Khi hòa quyện bên nhau, các loài hoa tạo nên một lời nhắn nhủ thật đẹp: Tình yêu không nhất thiết phải bắt đầu bằng những điều lớn lao, đôi khi chỉ cần sự chân thành và những quan tâm nhỏ bé cũng đủ khiến một người cảm thấy mình đặc biệt.",
-                loaiHoa: "Hoa hồng, mao lương, tulip và hoa phụ trang trí.",
+                loaiHoa: "Hoa mao lương, tulip và hoa phụ trang trí.",
                 phuHop: "Tặng người yêu, kỷ niệm ngày yêu nhau hoặc dành tặng một người đặc biệt mà bạn luôn muốn nâng niu.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
                 
@@ -353,7 +343,7 @@
                 gia: "290,000đ", 
                 anh: "images/tot nghiep 3.jpg", 
                 moTa: "Tuổi Trẻ là sự kết hợp đầy sức sống giữa sắc xanh dịu mát, sắc hồng ngọt ngào và những điểm hoa nhỏ xinh, tạo nên một bó hoa vừa tươi mới vừa đáng yêu. Hoa cẩm tú cầu xanh tượng trưng cho sự gắn kết và lòng biết ơn, hoa hồng hồng mang ý nghĩa về tình cảm chân thành, còn hoa cúc tana gợi lên nét hồn nhiên, trong trẻo. Những sắc hoa hòa quyện như chính tuổi trẻ với đủ cung bậc cảm xúc, có những ngày rực rỡ, có lúc chông chênh nhưng luôn đáng nhớ. Bó hoa gửi gắm lời nhắn: hãy cứ mạnh dạn trải nghiệm, dũng cảm theo đuổi điều mình yêu thích và đừng quên trân trọng những người đã cùng mình đi qua những năm tháng đẹp nhất.",
-                loaiHoa: "Hoa cẩm tú cầu xanh, hoa hồng hồng, hoa cúc tana và hoa phụ trang trí.",
+                loaiHoa: "Hoa cát tường trắng mix xanh và hoa phụ trang trí.",
                 phuHop: "Tặng sinh nhật, chúc mừng tốt nghiệp, động viên bạn bè hoặc dành tặng người luôn mang đến nguồn năng lượng tích cực cho mọi người xung quanh.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             },
@@ -362,7 +352,7 @@
                 gia: "160,000đ", 
                 anh: "images/tot nghiep 4.jpg", 
                 moTa: "Mây Trời mang vẻ đẹp tinh khôi với những đóa hoa trắng nhỏ xinh, tựa những đám mây nhẹ nhàng trôi giữa bầu trời xanh. Hoa hồng trắng tượng trưng cho sự chân thành và thuần khiết, hoa cát tường gợi lên lời chúc may mắn, bình an, còn sắc xanh của lá mang đến cảm giác thư thái và hy vọng. Sự kết hợp giản dị ấy tạo nên một bó hoa không quá cầu kỳ nhưng vẫn đầy ý nghĩa, như lời chúc mong người nhận luôn giữ được sự bình yên trong tâm hồn, tự do làm điều mình yêu thích và tìm thấy khoảng trời riêng giữa cuộc sống bộn bề.",
-                loaiHoa: "Hoa hồng trắng, hoa cát tường, hoa phụ trang trí.",
+                loaiHoa: "Hoa cẩm tú cầu xanh, hoa cẩm chướng hồng, hoa phụ trang trí.",
                 phuHop: "Sinh nhật, chúc mừng tốt nghiệp, tặng bạn bè hoặc dành tặng người yêu thích sự nhẹ nhàng, tinh tế.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             },
@@ -370,8 +360,8 @@
                 ten: "Thơ Ngây", 
                 gia: "260,000đ", 
                 anh: "images/tot nghiep 5.jpg", 
-                moTa: "Ngây Thơ mang sắc tím lavender dịu dàng hòa cùng những đóa hoa trắng tinh khôi, tạo nên vẻ đẹp nhẹ nhàng và trong trẻo như những rung động đầu đời. Hoa cát tường trắng tượng trưng cho sự chân thành và những điều tốt đẹp, hoa tím gợi lên nét dịu dàng, lãng mạn, còn những cánh hoa nhỏ đan xen khiến tổng thể thêm phần mềm mại, đáng yêu. Tất cả hòa quyện như một lời nhắc về sự hồn nhiên đáng quý trong mỗi người: dù lớn lên và trải qua nhiều điều, mong chúng ta vẫn giữ được một trái tim biết rung động trước những điều giản dị, biết yêu thương chân thành và tin vào những điều tốt đẹp.",
-                loaiHoa: "Hoa cát tường tím, hoa cát tường trắng, hoa phụ trang trí.",
+                moTa: "Ngây Thơ mang sắc tím lavender dịu dàng hòa cùng những đóa hoa trắng tinh khôi, tạo nên vẻ đẹp nhẹ nhàng và trong trẻo như những rung động đầu đời. Hoa cẩm chướng trắng tượng trưng cho sự chân thành và những điều tốt đẹp, hoa tím gợi lên nét dịu dàng, lãng mạn, còn những cánh hoa nhỏ đan xen khiến tổng thể thêm phần mềm mại, đáng yêu. Tất cả hòa quyện như một lời nhắc về sự hồn nhiên đáng quý trong mỗi người: dù lớn lên và trải qua nhiều điều, mong chúng ta vẫn giữ được một trái tim biết rung động trước những điều giản dị, biết yêu thương chân thành và tin vào những điều tốt đẹp.",
+                loaiHoa: "Hoa cẩm chướng trắng, hoa phi yến, hoa phụ trang trí.",
                 phuHop: "Chúc mừng tốt nghiệp, tặng bạn bè hoặc dành tặng người yêu thích sự nhẹ nhàng, tinh tế.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             },
@@ -379,8 +369,8 @@
                 ten: "Nhiệt Huyết", 
                 gia: "360,000đ", 
                 anh: "images/tot nghiep 6.jpg", 
-                moTa: "Nhiệt Huyết mang vẻ đẹp độc đáo với sắc xanh dịu mát hòa cùng màu kem nhẹ nhàng, tạo nên cảm giác vừa tươi mới vừa đầy sức sống. Hoa hồng kem tượng trưng cho sự trân trọng và tình cảm chân thành, hoa cẩm chướng xanh gợi lên nét mới mẻ, khác biệt, còn những bông hoa trắng nhỏ điểm xuyết mang ý nghĩa về sự tinh khôi và hy vọng. Sự kết hợp ấy giống như hình ảnh của một người luôn sống hết mình với những điều mình tin tưởng, dám theo đuổi đam mê nhưng vẫn giữ được sự dịu dàng trong tâm hồn. Bó hoa thay lời nhắn gửi: hãy luôn giữ ngọn lửa nhiệt thành trong tim, bởi chính niềm tin và sự cố gắng sẽ khiến hành trình của bạn trở nên đáng nhớ.",
-                loaiHoa: "Hoa hồng kem, hoa cẩm chướng xanh, hoa phụ trắng và hoa trang trí.",
+                moTa: "Nhiệt Huyết tượng trưng cho ngọn lửa đam mê, sự nhiệt thành và tinh thần luôn hết mình với những điều mình yêu thương. Bó hoa mang sắc trắng – xanh thanh khiết, gửi gắm lời chúc về một hành trình luôn tràn đầy năng lượng, niềm tin và khát vọng vươn xa. Sự kết hợp của hoa hồng tượng trưng cho tình cảm chân thành, hoa cẩm chướng đại diện cho sự yêu thương và lòng trân trọng, cùng hoa lan hồ điệp mang ý nghĩa về sự thanh cao, may mắn và thành công. Tất cả hòa quyện tạo nên một món quà tinh tế, thay lời chúc cho những đam mê luôn rực cháy và nhiệt huyết không bao giờ tắt.",
+                loaiHoa: "Hoa hồng, hoa cẩm chướng xanh, hoa lan hồ điệp và hoa trang trí.",
                 phuHop: "Chúc mừng tốt nghiệp, tặng bạn bè hoặc dành tặng người yêu thích sự độc đáo, mới mẻ và tràn đầy năng lượng.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             },
@@ -406,8 +396,8 @@
                 ten: "Rực Rỡ", 
                 gia: "200,000đ", 
                 anh: "images/tot nghiep 9.jpg", 
-                moTa: "Sinh nhật, chúc mừng thành tích, tặng bạn bè hoặc gửi lời động viên đến người cần thêm niềm vui và năng lượng tích cực.",
-                loaiHoa: "Hoa hồng vàng, hoa sứ trắng và hoa phụ trang trí.",
+                moTa: "Rực Rỡ mang sắc vàng tươi tắn của những đóa hướng dương, kết hợp cùng những bông hoa phụ trắng tinh khôi, tạo nên vẻ đẹp giản dị nhưng tràn đầy năng lượng. Hoa hướng dương tượng trưng cho niềm tin, sự lạc quan và tinh thần luôn hướng về phía trước; những bông hoa trắng điểm xuyết gợi lên sự chân thành, bình yên và những khởi đầu tốt đẹp. Khi hòa quyện bên nhau, bó hoa như một lời chúc về sự may mắn, thành công và tinh thần không ngừng vươn lên. Cũng giống như hoa hướng dương luôn hướng về phía mặt trời, mong rằng người nhận sẽ luôn giữ được niềm tin, sự nhiệt huyết và bản lĩnh để theo đuổi những mục tiêu của mình.",
+                loaiHoa: "Hoa hướng dương và hoa phụ trang trí.",
                 phuHop: "Chúc mừng tốt nghiệp, chúc mừng thành tích, tặng bạn bè hoặc gửi lời động viên đến người cần thêm niềm vui và năng lượng tích cực.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             },
@@ -416,7 +406,7 @@
                 gia: "340,000đ", 
                 anh: "images/tot nghiep 10.jpg", 
                 moTa: "Tươi Sáng là sự kết hợp hài hòa giữa sắc hồng dịu dàng, sắc xanh trong trẻo và màu trắng tinh khôi, mang đến cảm giác vui vẻ ngay từ ánh nhìn đầu tiên. Hoa hồng pastel tượng trưng cho tình cảm chân thành, hoa cẩm tú cầu xanh gợi lên sự gắn kết và lòng biết ơn, còn hoa cúc trắng nhỏ xinh mang ý nghĩa về sự hồn nhiên, bình yên. Những gam màu đan xen như những tia nắng len qua bầu trời sau cơn mưa, nhắc ta rằng sau những ngày mệt mỏi vẫn luôn có những điều đáng mong chờ. Bó hoa là lời chúc người nhận luôn giữ được tinh thần lạc quan, một trái tim ấm áp và niềm tin để đón nhận những khởi đầu mới.",
-                loaiHoa: "Hoa hồng pastel, hoa cẩm tú cầu xanh, hoa cúc trắng và hoa phụ trang trí.",
+                loaiHoa: "Hoa hồng pastel, hoa phi yến,hoa cúc trắng nhỏ và hoa phụ trang trí.",
                 phuHop: "Chúc mừng tốt nghiệp, chúc mừng thành tích, tặng bạn bè hoặc gửi lời động viên đến người cần thêm niềm vui và năng lượng tích cực.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             },
@@ -424,8 +414,8 @@
                 ten: "Hy Vọng", 
                 gia: "400,000đ", 
                 anh: "images/tot nghiep 11.jpg", 
-                moTa: "Hy Vọng mang vẻ đẹp nhẹ nhàng với sắc xanh tươi mát hòa cùng màu trắng tinh khôi và những điểm hoa tím dịu dàng. Hoa hồng trắng tượng trưng cho sự chân thành và những khởi đầu mới, hoa cẩm tú cầu xanh gợi lên niềm tin, sự gắn kết, còn những nhành hoa tím nhỏ mang đến nét dịu dàng và mơ mộng. Tất cả hòa quyện như một lời động viên dành cho những ai đang bước qua giai đoạn khó khăn hoặc đứng trước một hành trình mới. Bởi hy vọng không có nghĩa là mọi chuyện sẽ luôn dễ dàng, mà là dù chưa biết ngày mai ra sao, ta vẫn tin mình có thể bước tiếp và đón nhận những điều tốt đẹp. Mong rằng bó hoa này sẽ nhắc bạn luôn tin vào bản thân và không ngừng hướng về phía trước.",
-                loaiHoa: "Hoa hồng trắng, hoa cẩm tú cầu xanh, hoa cúc tím và hoa phụ trang trí.",
+                moTa: "Hy Vọng mang vẻ đẹp nhẹ nhàng với sắc xanh tươi mát hòa cùng màu trắng tinh khôi và những điểm hoa tím dịu dàng. Hoa hồng trắng tượng trưng cho sự chân thành và những khởi đầu mới, hoa hồng xanh gợi lên niềm tin, sự gắn kết. Tất cả hòa quyện như một lời động viên dành cho những ai đang bước qua giai đoạn khó khăn hoặc đứng trước một hành trình mới. Bởi hy vọng không có nghĩa là mọi chuyện sẽ luôn dễ dàng, mà là dù chưa biết ngày mai ra sao, ta vẫn tin mình có thể bước tiếp và đón nhận những điều tốt đẹp. Mong rằng bó hoa này sẽ nhắc bạn luôn tin vào bản thân và không ngừng hướng về phía trước.",
+                loaiHoa: "Hoa hồng trắng mix xanh và hoa phụ trang trí.",
                 phuHop: "Chúc mừng tốt nghiệp, chúc mừng thành tích, tặng bạn bè hoặc gửi lời động viên đến người cần thêm niềm vui và năng lượng tích cực.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             },
@@ -460,8 +450,8 @@
                 ten: "Thịnh Vượng", 
                 gia: "520,000đ", 
                 anh: "images/khai truong 3.jpg", 
-                moTa: "Thịnh Vượng gây ấn tượng với sắc vàng rực rỡ của hoa hướng dương hòa cùng màu cam ấm áp của hoa hồng và những nhành hoa xanh tươi mát. Hoa hướng dương tượng trưng cho niềm tin, sự kiên định và tinh thần luôn hướng về phía trước; hoa hồng cam mang ý nghĩa về nhiệt huyết, sự sáng tạo và khát vọng vươn lên; còn những tán lá xanh gợi nhắc đến sự sinh sôi, phát triển bền vững. Sự kết hợp ấy tạo nên một tổng thể đầy năng lượng, như lời chúc cho hành trình kinh doanh luôn rộng mở, công việc ngày càng phát triển và thành quả hôm nay sẽ trở thành nền tảng cho những thành công lớn hơn trong tương lai.",
-                loaiHoa: "Hoa hướng dương, hoa hồng cam, hoa cẩm tú cầu xanh và hoa phụ trang trí.",
+                moTa: "Thịnh Vượng gây ấn tượng với sắc vàng rực rỡ của hoa hướng dương hòa cùng màu cam ấm áp của hoa hồng. Hoa hướng dương tượng trưng cho niềm tin, sự kiên định và tinh thần luôn hướng về phía trước; hoa hồng cam mang ý nghĩa về nhiệt huyết, sự sáng tạo và khát vọng vươn lên; còn những tán lá xanh gợi nhắc đến sự sinh sôi, phát triển bền vững. Sự kết hợp ấy tạo nên một tổng thể đầy năng lượng, như lời chúc cho hành trình kinh doanh luôn rộng mở, công việc ngày càng phát triển và thành quả hôm nay sẽ trở thành nền tảng cho những thành công lớn hơn trong tương lai.",
+                loaiHoa: "Hoa hướng dương, hoa hồng cam và hoa phụ trang trí.",
                 phuHop: "Khai trương cửa hàng, công ty, nhà hàng hoặc chúc mừng đối tác đạt được những cột mốc quan trọng.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             },
@@ -470,7 +460,7 @@
                 gia: "800,000đ", 
                 anh: "images/khai truong 4.jpg", 
                 moTa: "Hồng Phát mang sắc hồng rực rỡ với những đóa hoa đan xen nhiều tầng màu sắc, tạo nên vẻ đẹp đầy đặn, nổi bật và tràn ngập niềm vui. Hoa hồng hồng tượng trưng cho những mối quan hệ tốt đẹp và sự trân trọng, hoa cẩm tú cầu gợi lên tinh thần gắn kết, đồng lòng, còn hoa cẩm chướng mang ý nghĩa về sự bền bỉ và những tình cảm chân thành. Khi hòa quyện với nhau, các loài hoa gửi gắm lời chúc cho công việc ngày càng phát đạt, tập thể luôn đoàn kết và mọi nỗ lực đều được đền đáp xứng đáng. Hồng Phát không chỉ mang ý nghĩa về tài lộc mà còn tượng trưng cho sự phát triển đi cùng niềm vui, sự tin tưởng và những mối quan hệ bền lâu.",
-                loaiHoa: "Hoa hồng hồng, hoa cẩm tú cầu, hoa cẩm chướng và hoa phụ trang trí.",
+                loaiHoa: "Hoa hồng hồng, hoa tulip, hoa cẩm tú cầu, hoa cẩm chướng và hoa phụ trang trí.",
                 phuHop: "Khai trương cửa hàng, công ty, nhà hàng hoặc chúc mừng đối tác đạt được những cột mốc quan trọng.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             },
@@ -480,7 +470,7 @@
                 gia: "720,000đ", 
                 anh: "images/khai truong 5.jpg", 
                 moTa: "Khởi Sắc mang vẻ đẹp nhẹ nhàng nhưng không kém phần nổi bật với sắc cam ấm áp, hồng pastel và trắng tinh khôi. Hoa hồng cam tượng trưng cho nhiệt huyết, sự sáng tạo và khát vọng chinh phục những mục tiêu mới; hoa hồng hồng gửi gắm sự trân trọng, còn hoa cúc trắng gợi lên niềm tin và những khởi đầu bình an. Sự hòa quyện giữa các gam màu tạo nên cảm giác tươi mới, như ánh nắng đầu ngày báo hiệu một hành trình đầy triển vọng. Bó hoa là lời chúc rằng mọi dự định sẽ dần thành hình, những khó khăn sẽ trở thành kinh nghiệm quý giá và công việc kinh doanh sẽ ngày càng khởi sắc, phát triển vững vàng.",
-                loaiHoa: "Hoa hồng cam, hoa hồng hồng, hoa cúc trắng và hoa phụ trang trí.",
+                loaiHoa: "Hoa hồng, hoa lan hồ điệp và hoa phụ trang trí.",
                 phuHop: "Khai trương cửa hàng, công ty, quán cà phê, chúc mừng ra mắt thương hiệu hoặc bắt đầu một dự án mới.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             },
@@ -489,7 +479,7 @@
                 gia: "880,000đ", 
                 anh: "images/khai truong 6.jpg", 
                 moTa: "Vạn Lộc nổi bật với sắc hồng ngọt ngào, được kết hợp từ nhiều loài hoa đan xen, tạo nên một kệ hoa đầy đặn, rực rỡ và tràn đầy sức sống. Hoa hồng tượng trưng cho những mối quan hệ tốt đẹp và sự trân trọng, hoa đồng tiền mang ý nghĩa về tài lộc, may mắn, còn những nhành hoa nhỏ điểm xuyết gợi lên sự phát triển và sức sống bền bỉ. Tất cả hòa quyện như lời chúc cho công việc kinh doanh luôn thuận lợi, tài lộc ngày càng dồi dào và thành công nối tiếp thành công. Bởi thịnh vượng không chỉ là những thành quả đạt được hôm nay, mà còn là nền tảng vững chắc để tiếp tục vươn xa trong tương lai.",
-                loaiHoa: "Hoa hồng hồng, hoa đồng tiền, hoa cẩm chướng và hoa phụ trang trí.",
+                loaiHoa: "Hoa hồng hồng, hoa lan hồ điệp, hoa cẩm chướng và hoa phụ trang trí.",
                 phuHop: " Khai trương cửa hàng, công ty, nhà hàng hoặc chúc mừng đối tác bắt đầu một hành trình kinh doanh mới.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             },
@@ -497,8 +487,8 @@
                 ten: "Cát Tường", 
                 gia: "750,000đ", 
                 anh: "images/khai truong 7.jpg", 
-                moTa: "Cát Tường mang vẻ đẹp thanh lịch với sắc trắng tinh khôi, hồng pastel và tím dịu dàng hòa quyện cùng nhau. Hoa hồng tượng trưng cho sự trân trọng và những mối quan hệ tốt đẹp, hoa cát tường gửi gắm lời chúc may mắn, thuận lợi, còn những bông hoa tím điểm xuyết mang ý nghĩa về sự gắn kết và niềm tin. Sự kết hợp ấy tạo nên một kệ hoa vừa trang nhã vừa giàu ý nghĩa, như lời chúc mọi việc diễn ra suôn sẻ, những dự định sớm thành hiện thực và con đường phía trước luôn rộng mở. Đôi khi, điều quý giá nhất trong một khởi đầu không chỉ là thành công, mà còn là sự bình an và may mắn đồng hành trên từng bước đi.",
-                loaiHoa: "Hoa hồng pastel, hoa cát tường, hoa tím và hoa phụ trang trí.",
+                moTa: "Cát Tường mang vẻ đẹp thanh lịch với sắc trắng tinh khôi, hồng pastel và tím dịu dàng hòa quyện cùng nhau. Hoa hồng tượng trưng cho sự trân trọng và những mối quan hệ tốt đẹp, hoa cúc mẫu đơn gửi gắm lời chúc may mắn, thuận lợi. Sự kết hợp ấy tạo nên một kệ hoa vừa trang nhã vừa giàu ý nghĩa, như lời chúc mọi việc diễn ra suôn sẻ, những dự định sớm thành hiện thực và con đường phía trước luôn rộng mở. Đôi khi, điều quý giá nhất trong một khởi đầu không chỉ là thành công, mà còn là sự bình an và may mắn đồng hành trên từng bước đi.",
+                loaiHoa: "Hoa hồng pastel, hoa cúc mẫu đơn tím và hoa phụ trang trí.",
                 phuHop: "Khai trương, chúc mừng cửa hàng mới, ra mắt thương hiệu hoặc gửi lời chúc thuận lợi đến đối tác, khách hàng.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             },
@@ -506,8 +496,8 @@
                 ten: "Thành Công", 
                 gia: "850,000đ", 
                 anh: "images/khai truong 8.jpg", 
-                moTa: "Thành Công gây ấn tượng với sắc cam rực rỡ hòa cùng màu vàng tươi sáng và những điểm hồng nổi bật, tạo nên một kệ hoa tràn đầy năng lượng. Hoa hồng cam tượng trưng cho nhiệt huyết, sự sáng tạo và khát vọng vươn lên; hoa hướng dương mang ý nghĩa về niềm tin, sự kiên định và tinh thần luôn hướng về phía trước; còn sắc vàng gợi lên sự sung túc và những điều tốt lành. Khi hòa quyện cùng nhau, các loài hoa như gửi gắm lời chúc mọi nỗ lực đều được đền đáp, mọi kế hoạch đều tiến triển thuận lợi và những mục tiêu lớn sẽ dần trở thành hiện thực. Thành công không đến chỉ sau một ngày, mà được tạo nên từ sự kiên trì, quyết tâm và niềm tin không ngừng nghỉ.",
-                loaiHoa: "Hoa hồng cam, hoa hướng dương, hoa đồng tiền và hoa phụ trang trí.",
+                moTa: "Thành Công gây ấn tượng với sắc cam rực rỡ hòa cùng màu vàng tươi sáng và những điểm hồng nổi bật, tạo nên một kệ hoa tràn đầy năng lượng. Hoa hồng cam tượng trưng cho nhiệt huyết, sự sáng tạo và khát vọng vươn lên, sự kiên định và tinh thần luôn hướng về phía trước; còn sắc vàng gợi lên sự sung túc và những điều tốt lành. Khi hòa quyện cùng nhau, các loài hoa như gửi gắm lời chúc mọi nỗ lực đều được đền đáp, mọi kế hoạch đều tiến triển thuận lợi và những mục tiêu lớn sẽ dần trở thành hiện thực. Thành công không đến chỉ sau một ngày, mà được tạo nên từ sự kiên trì, quyết tâm và niềm tin không ngừng nghỉ.",
+                loaiHoa: "Hoa hồng, hoa cúc mẫu đơn và hoa phụ trang trí.",
                 phuHop: "Khai trương, chúc mừng thăng chức, thành lập doanh nghiệp, ký kết hợp tác hoặc chúc mừng những cột mốc quan trọng.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             },
@@ -524,8 +514,8 @@
                 ten: "Phát Lộc", 
                 gia: "1,199,000đ", 
                 anh: "images/khai truong 11.jpg", 
-                moTa: "Phát Lộc mang vẻ đẹp tươi sáng với sắc kem nhẹ nhàng hòa cùng màu xanh mát mắt và những đóa hoa trắng tinh khôi. Hoa hồng kem tượng trưng cho sự trân trọng và những mối quan hệ bền vững, hoa cẩm tú cầu xanh gợi lên sự gắn kết, đồng lòng, còn những bông hoa trắng mang ý nghĩa về sự khởi đầu thuận lợi và niềm tin vào tương lai. Khi kết hợp cùng nhau, các loài hoa tạo nên một kệ hoa trang nhã nhưng vẫn tràn đầy sức sống, gửi gắm lời chúc tài lộc sinh sôi, công việc ngày càng phát triển và những thành quả tốt đẹp liên tục được vun đắp. Phát lộc không chỉ là lời chúc về tiền tài, mà còn là mong ước cho sự nghiệp vững vàng, khách hàng tin tưởng và thành công bền lâu.",
-                loaiHoa: "Hoa hồng kem, hoa cẩm tú cầu xanh, hoa cúc trắng và hoa phụ trang trí.",
+                moTa: "Phát Lộc mang vẻ đẹp tươi sáng với sắc hoa nhẹ nhàng, mát mắt và tinh khôi. Hoa lan hồ điệp tượng trưng cho sự trân trọng và những mối quan hệ bền vững, hoa đồng tiền gợi lên sự gắn kết, đồng lòng, và còn ý nghĩa về sự khởi đầu thuận lợi và niềm tin vào tương lai. Khi kết hợp cùng nhau, các loài hoa tạo nên một kệ hoa trang nhã nhưng vẫn tràn đầy sức sống, gửi gắm lời chúc tài lộc sinh sôi, công việc ngày càng phát triển và những thành quả tốt đẹp liên tục được vun đắp. Phát lộc không chỉ là lời chúc về tiền tài, mà còn là mong ước cho sự nghiệp vững vàng, khách hàng tin tưởng và thành công bền lâu.",
+                loaiHoa: "Hoa lan trắng, hoa đồng tiền, hoa hồng trắng và hoa phụ trang trí.",
                 phuHop: "Khai trương cửa hàng, công ty, chúc mừng kinh doanh phát đạt hoặc dành tặng đối tác trong những dịp quan trọng.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             },
@@ -533,13 +523,13 @@
                 ten: "Như Ý", 
                 gia: "1,599,000đ", 
                 anh: "images/khai truong 10.jpg", 
-                moTa: "Như Ý mang vẻ đẹp nổi bật với sự kết hợp giữa sắc xanh dương tươi mát và màu trắng tinh khôi, tạo cảm giác vừa sang trọng vừa an yên. Hoa lan trắng tượng trưng cho sự thanh cao và thành công, hoa cẩm tú cầu xanh gợi lên sự gắn kết và lòng biết ơn, còn những bông hoa xanh nổi bật mang đến cảm giác tươi mới, đầy hy vọng. Các loài hoa hòa quyện như lời chúc mọi điều mong muốn đều có cơ hội trở thành hiện thực, công việc thuận buồm xuôi gió và những dự định luôn gặp được người đồng hành phù hợp. Bởi đôi khi, như ý không phải là mọi thứ đều diễn ra đúng kế hoạch, mà là dù hành trình có thay đổi, ta vẫn tìm được hướng đi tốt đẹp cho mình.",
-                loaiHoa: "Hoa lan trắng, hoa cẩm tú cầu xanh, hoa hồng trắng và hoa phụ trang trí.",
+                moTa: "Như Ý mang vẻ đẹp nổi bật với sự kết hợp giữa sắc xanh dương tươi mát và màu trắng tinh khôi, tạo cảm giác vừa sang trọng vừa an yên. Hoa lan trắng tượng trưng cho sự thanh cao và thành công, hoa cúc mẫu đơn xanh gợi lên sự gắn kết, đồng lòng, và còn ý nghĩa về sự khởi đầu thuận lợi và niềm tin vào tương lai. Các loài hoa hòa quyện như lời chúc mọi điều mong muốn đều có cơ hội trở thành hiện thực, công việc thuận buồm xuôi gió và những dự định luôn gặp được người đồng hành phù hợp. Bởi đôi khi, như ý không phải là mọi thứ đều diễn ra đúng kế hoạch, mà là dù hành trình có thay đổi, ta vẫn tìm được hướng đi tốt đẹp cho mình.",
+                loaiHoa: "Hoa lan hồ điệp, hoa cúc mẫu đơn và hoa phụ trang trí",
                 phuHop: "Khai trương, chúc mừng đối tác, ra mắt thương hiệu hoặc gửi lời chúc may mắn, thuận lợi trong công việc.",
                 baoQuan: "Đặt hoa ở nơi thoáng mát, tránh ánh nắng trực tiếp và thay nước hàng ngày để giữ hoa tươi lâu."
             }
         };
-
+        
         // 2. ĐỌC ĐƯỜNG LINK VÀ ĐIỀN THÔNG TIN
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get('id'); // Lấy phần chữ đằng sau dấu ?id=
@@ -553,6 +543,7 @@
             document.getElementById('phu-hop').innerText = dataHoa[id].phuHop;
             document.getElementById('bao-quan').innerText = dataHoa[id].baoQuan;
         }
+
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
