@@ -1,0 +1,222 @@
+.qv-trigger {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translate(-50%, 10px);
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .25s ease;
+    white-space: nowrap;
+    background: #d96c8a;
+    color: #fff;
+    border: 0;
+    border-radius: 30px;
+    padding: 9px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+.product-item:hover .qv-trigger,
+.product-item.qv-active .qv-trigger {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.qv-trigger:hover {
+    background: #c85c7b;
+    color: #fff;
+}
+
+.qv-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10050;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(35, 25, 28, .55);
+}
+
+.qv-overlay.qv-show {
+    display: flex;
+}
+
+.qv-modal {
+    position: relative;
+    width: auto;                  
+    max-width: 720px;             
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 15px 50px rgba(0,0,0,.2);
+    animation: qvAppear .22s ease;
+    overflow: hidden;
+}
+
+@keyframes qvAppear {
+    from { opacity: 0; transform: translateY(15px) scale(.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.qv-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    color: #5c4d51;
+    font-size: 25px;
+    line-height: 1;
+    box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+
+.qv-content {
+    display: flex;
+    flex-wrap: nowrap;          
+    align-items: stretch;
+}
+
+
+.qv-image-wrap {
+    flex: 0 0 340px;            
+    width: 340px;
+    background: #fdfbf7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qv-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.qv-info {
+    flex: 1;                    
+    min-width: 320px;
+    padding: 30px 30px 25px;
+}
+
+
+.qv-title {
+    color: #5c4d51;
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.qv-price {
+    color: #d96c8a;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.qv-detail {
+    color: #6f6266;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.qv-detail strong {
+    color: #5c4d51;
+}
+
+.qv-qty-label {
+    display: block;
+    color: #5c4d51;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 22px 0 8px;
+}
+
+.qv-qty-box {
+    width: 135px;
+}
+
+.qv-add-btn {
+    background: #d96c8a;
+    color: #fff;
+    border: 0;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.qv-add-btn:hover {
+    background: #c85c7b;
+    color: #fff;
+}
+
+.qv-detail-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: #d96c8a;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.qv-detail-link:hover {
+    color: #c85c7b;
+    text-decoration: underline;
+}
+
+body.qv-no-scroll {
+    overflow: hidden;
+}
+
+@media (max-width: 576px) {
+    .qv-overlay {
+        padding: 10px;
+    }
+
+    .qv-modal {
+        max-height: 94vh;
+    }
+
+    .qv-content {
+        display: block;
+    }
+
+    .qv-image {
+        min-height: 0;
+        height: 250px;
+    }
+
+    .qv-info {
+        padding: 22px 20px 25px;
+        min-width: 0;
+    }
+
+    .qv-title {
+        font-size: 23px;
+    }
+
+    .qv-trigger {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, 0);
+        bottom: 12px;
+        padding: 7px 15px;
+    }
+
+    .qv-buy-row {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .qv-add-btn {
+        width: 100%;
+    }
+}
