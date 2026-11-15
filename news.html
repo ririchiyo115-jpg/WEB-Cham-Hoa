@@ -6,9 +6,10 @@
         </div>
     </div>
 
-  <header class="bg-light shadow-sm sticky-top">
+ <header class="bg-light shadow-sm sticky-top">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light py-2">
+            <!-- Logo -->
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo 4.png" alt="Chạm Hoa" style="height: 50px; width: auto;">
             </a>
@@ -17,16 +18,17 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            
+            <!-- Thêm class align-items-center vào đây để căn giữa toàn bộ menu và các nút điều hướng -->
             <div class="collapse navbar-collapse align-items-center" id="navbarNav">
                 <ul class="navbar-nav mx-auto align-items-center">
                     <li class="nav-item"><a class="nav-link font-weight-bold" href="index.html">Trang chủ</a></li>
                     <li class="nav-item"><a class="nav-link font-weight-bold" href="products.html" onclick="localStorage.setItem('nhoDanhMuc', 'all');">Cửa hàng</a></li>
                     <li class="nav-item active"><a class="nav-link font-weight-bold" href="news.html">Tin tức</a></li>
                     <li class="nav-item"><a class="nav-link font-weight-bold" href="about.html">Về chúng tôi</a></li>
-                    <li class="nav-item "><a class="nav-link font-weight-bold" href="contact.html">Liên hệ</a></li>
+                    <li class="nav-item"><a class="nav-link font-weight-bold" href="contact.html">Liên hệ</a></li>
                 </ul>
 
+                <!-- Khối Tìm Kiếm, Đăng Nhập, Giỏ hàng & Yêu thích (Đã gom chung vào đây và thêm align-items-center) -->
                 <div class="d-flex align-items-center mt-3 mt-lg-0">
                     <form class="form-inline position-relative mr-3 mb-0" action="products.html">
                         <input class="form-control rounded-pill search-input pr-5" type="search" id="search-input" placeholder="Tìm loài hoa, màu sắc..." style="width: 200px; font-size: 0.9rem;">
@@ -68,8 +70,6 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
-    <!-- Dán header từ index.html vào đây -->
 
     <main class="container news-page py-5">
         <div class="text-center mb-5">
