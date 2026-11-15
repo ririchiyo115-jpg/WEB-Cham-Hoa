@@ -7,50 +7,52 @@
     </div>
 
  <header class="bg-light shadow-sm sticky-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light py-2">
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/logo 4.png" alt="Chạm Hoa" style="height: 50px; width: auto;">
-                </a>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light py-2">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo 4.png" alt="Chạm Hoa" style="height: 50px; width: auto;">
+            </a>
 
-                <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item active"><a class="nav-link font-weight-bold" href="index.html">Trang chủ</a></li>
-                        <li class="nav-item"><a class="nav-link font-weight-bold" href="products.html" onclick="localStorage.setItem('nhoDanhMuc', 'all');">Cửa hàng</a></li>
-                        <!-- Thêm mục Tin tức vào đây -->
-                        <li class="nav-item"><a class="nav-link font-weight-bold" href="news.html">Tin tức</a></li>
-                        <li class="nav-item"><a class="nav-link font-weight-bold" href="about.html">Về chúng tôi</a></li>
-                        <li class="nav-item"><a class="nav-link font-weight-bold" href="contact.html">Liên hệ</a></li>
-                    </ul>
+            <!-- Thêm class align-items-center vào đây để căn giữa toàn bộ menu và các nút điều hướng -->
+            <div class="collapse navbar-collapse align-items-center" id="navbarNav">
+                <ul class="navbar-nav mx-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link font-weight-bold" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link font-weight-bold" href="products.html" onclick="localStorage.setItem('nhoDanhMuc', 'all');">Cửa hàng</a></li>
+                    <li class="nav-item"><a class="nav-link font-weight-bold" href="news.html">Tin tức</a></li>
+                    <li class="nav-item"><a class="nav-link font-weight-bold" href="about.html">Về chúng tôi</a></li>
+                    <li class="nav-item active"><a class="nav-link font-weight-bold" href="contact.html">Liên hệ</a></li>
+                </ul>
 
-                    <!-- Khối Tìm Kiếm, Đăng Nhập & Giỏ Hàng -->
-                    <div class="d-flex align-items-center mt-3 mt-lg-0">
-                        <form class="form-inline position-relative mr-4" action="products.html">
-                            <input class="form-control rounded-pill search-input pr-5" type="search" id="search-input" placeholder="Tìm loài hoa, màu sắc..." style="width: 200px; font-size: 0.9rem;">
-                            <button class="btn btn-link position-absolute text-pink" type="submit" style="right: 5px; top: 0;"><i class="fas fa-search"></i></button>
-                        </form>
-                        
-                        <a href="#" class="text-dark text-decoration-none mr-3 font-weight-bold hover-pink" data-toggle="modal" data-target="#loginModal" title="Tài khoản">
-                            <i class="far fa-user fa-lg text-pink mr-1"></i><span class="d-none d-xl-inline small">Đăng nhập</span>
-                        </a>
+                <!-- Khối Tìm Kiếm, Đăng Nhập, Giỏ hàng & Yêu thích (Đã gom chung vào đây và thêm align-items-center) -->
+                <div class="d-flex align-items-center mt-3 mt-lg-0">
+                    <form class="form-inline position-relative mr-3 mb-0" action="products.html">
+                        <input class="form-control rounded-pill search-input pr-5" type="search" id="search-input" placeholder="Tìm loài hoa, màu sắc..." style="width: 200px; font-size: 0.9rem;">
+                        <button class="btn btn-link position-absolute text-pink" type="submit" style="right: 5px; top: 0;"><i class="fas fa-search"></i></button>
+                    </form>
+                    
+                    <a href="#" class="text-dark text-decoration-none mr-3 font-weight-bold hover-pink" data-toggle="modal" data-target="#loginModal" title="Tài khoản">
+                        <i class="far fa-user fa-lg text-pink mr-1"></i><span class="d-none d-xl-inline small">Đăng nhập</span>
+                    </a>
 
-                        <a href="cart.html" class="position-relative text-decoration-none hover-pink" title="Giỏ hàng">
-                            <i class="fas fa-shopping-cart fa-lg text-pink"></i>
-                            <span class="badge badge-pill position-absolute cart-badge">0</span>
-                        </a>
-                    </div>
+                    <a href="cart.html" class="position-relative text-decoration-none mr-3 hover-pink" title="Giỏ hàng">
+                        <i class="fas fa-shopping-cart fa-lg text-pink"></i>
+                        <span class="badge badge-pill position-absolute cart-badge">0</span>
+                    </a>
+
+                    <a href="yeu-thich.html" class="position-relative text-dark text-decoration-none hover-pink" title="Danh sách hoa yêu thích">
+                        <i class="fas fa-heart fa-lg" style="color: #d87093;"></i>
+                        <span class="badge badge-pill position-absolute wishlist-badge header-wishlist-count">0</span>
+                    </a>
                 </div>
-                <a href="yeu-thich.html" class="position-relative text-dark ml-4 mr-3 text-decoration-none" title="Danh sách hoa yêu thích">
-                     <i class="fas fa-heart fa-lg header-heart" style="color: #d87093;"></i>
-                     <span class="badge badge-pill position-absolute wishlist-badge header-wishlist-count">0</span>
-                </a>
-            </nav>
-        </div>
-    </header>
+            </div>
+        </nav>
+    </div>
+</header>
    
 <!DOCTYPE html>
 <html lang="vi">
