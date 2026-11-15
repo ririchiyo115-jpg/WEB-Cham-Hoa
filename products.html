@@ -33,7 +33,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a class="nav-link font-weight-bold" href="index.html">Trang chủ</a></li>
-                        <li class="nav-item active"><a class="nav-link font-weight-bold" href="products.html">Cửa hàng</a></li>
+                        <li class="nav-item active"><a class="nav-link font-weight-bold" href="products.html" onclick="localStorage.setItem('nhoDanhMuc', 'all');">Cửa hàng</a></li>
                         <!-- Thêm mục Tin tức vào đây -->
                         <li class="nav-item"><a class="nav-link font-weight-bold" href="news.html">Tin tức</a></li>
                         <li class="nav-item"><a class="nav-link font-weight-bold" href="about.html">Về chúng tôi</a></li>
@@ -43,7 +43,7 @@
                     <!-- Khối Tìm Kiếm, Đăng Nhập & Giỏ Hàng -->
                     <div class="d-flex align-items-center mt-3 mt-lg-0">
                         <form class="form-inline position-relative mr-4" onsubmit="return false;">
-                            <input class="form-control rounded-pill search-input pr-5" type="search" id="search-input" placeholder="Tìm loài hoa, màu sắc..." style="width: 300px; font-size: 0.9rem;">
+                            <input class="form-control rounded-pill search-input pr-5" type="search" id="search-input" placeholder="Tìm loài hoa, màu sắc..." style="width: 200px; font-size: 0.9rem;">
                             <button class="btn btn-link position-absolute text-pink" type="button" style="right: 5px; top: 0;">
                                 <i class="fas fa-search"></i>
                             </button>
@@ -59,6 +59,10 @@
                         </a>
                     </div>
                 </div>
+                <a href="yeu-thich.html" class="position-relative text-dark ml-4 mr-3 text-decoration-none" title="Danh sách hoa yêu thích">
+                    <i class="fas fa-heart fa-lg header-heart" style="color: #d87093;"></i>
+                    <span class="badge badge-pill position-absolute wishlist-badge header-wishlist-count">0</span>
+                </a>
             </nav>
         </div>
     </header>
@@ -595,6 +599,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
 <script src="cart.js"></script>
 <script>
     $(document).ready(function() {
@@ -620,31 +625,25 @@
                 });
             }
         }
-
-        // ==========================================
-        // 2. PHỤC HỒI TRÍ NHỚ NGAY KHI VỪA MỞ TRANG
-        // ==========================================
-       // A. Phục hồi từ khóa tìm kiếm (nếu khách đi từ trang chi tiết về)
-      //  var tuKhoaCu = localStorage.getItem('nhoTuKhoa');
-      //  if (tuKhoaCu && tuKhoaCu !== "") {
-            // Điền từ khóa vào ô
-      //      $('#search-input').val(tuKhoaCu);
-            
-            // Xóa từ khóa trong bộ nhớ đi để lần sau khách F5 không bị kẹt lại chữ này
-      //      localStorage.removeItem('nhoTuKhoa'); 
-            
-            // Bắt buộc ưu tiên về danh mục "Tất cả" để tìm kiếm diện rộng
-      //      localStorage.setItem('nhoDanhMuc', 'all');
-      //      hienThiDanhMuc('all');
-
-            // "Bóp cò" tự động chạy hàm tìm kiếm chữ
-     //       $('#search-input').trigger('input');
-    //    } 
-    //    else { 
         // B. Đọc lại danh mục khách vừa xem (nếu không có thì mặc định hiển thị tất cả 'all')
         var danhMucCu = localStorage.getItem('nhoDanhMuc') || 'all';
         hienThiDanhMuc(danhMucCu); // Gọi hàm để chạy ngay lập tức
-     //   }
+       // ==========================================
+        // CẬP NHẬT SỐ LƯỢNG YÊU THÍCH
+        // ==========================================
+        function khoiTaoNutYeuThich() {
+            $('.product-item').each(function() {
+                var href = $(this).find('a[href*="id="]').attr('href') || $(this).find('[onclick*="id="]').attr('onclick') || "";
+                var idMatch = href.match(/id=([^&'"]+)/);
+                var productId = idMatch ? idMatch[1] : ($(this).attr('data-id') || "");
+
+                if (productId) {
+                    $(this).attr('data-id', productId);
+                }
+            });
+
+            capNhatSoLuongYeuThich();
+        }
         // ==========================================
         // 3. KHI KHÁCH HÀNG BẤM VÀO DANH MỤC TRÊN MENU
         // ==========================================

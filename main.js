@@ -19,4 +19,14 @@ $(document).ready(function() {
         }
     });
 });
+// Tự động đồng bộ số lượng hoa yêu thích trên thanh menu ở mọi trang
+function dongBoSoLuongYeuThich() {
+    const ds = JSON.parse(localStorage.getItem('wishlistHoa')) || [];
+    document.querySelectorAll('.header-wishlist-count').forEach(function(el) {
+        el.innerText = ds.length;
+    });
+}
+dongBoSoLuongYeuThich();
+document.addEventListener('DOMContentLoaded', dongBoSoLuongYeuThich);
+window.addEventListener('pageshow', dongBoSoLuongYeuThich);
 

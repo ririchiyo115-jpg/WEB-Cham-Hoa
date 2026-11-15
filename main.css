@@ -47,7 +47,20 @@ body {
 }
 .fa-shopping-cart { transition: transform 0.2s ease; }
 .fa-shopping-cart:hover { transform: scale(1.2); }
-
+.wishlist-badge {
+    top: -8px;
+    right: -10px;
+    font-size: 0.7rem;
+    background-color: #ff4757;
+    color: white;
+    border: 1px solid white;
+}
+.header-heart {
+    transition: transform 0.2s ease;
+}
+.header-heart:hover {
+    transform: scale(1.2);
+}
 /* Nút bấm (Buttons) & Phân trang */
 .custom-btn { 
     background-color: var(--dark-pink); 

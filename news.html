@@ -20,7 +20,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item active"><a class="nav-link font-weight-bold" href="index.html">Trang chủ</a></li>
-                        <li class="nav-item"><a class="nav-link font-weight-bold" href="products.html">Cửa hàng</a></li>
+                        <li class="nav-item"><a class="nav-link font-weight-bold" href="products.html" onclick="localStorage.setItem('nhoDanhMuc', 'all');">Cửa hàng</a></li>
                         <!-- Thêm mục Tin tức vào đây -->
                         <li class="nav-item"><a class="nav-link font-weight-bold" href="news.html">Tin tức</a></li>
                         <li class="nav-item"><a class="nav-link font-weight-bold" href="about.html">Về chúng tôi</a></li>
@@ -30,7 +30,7 @@
                     <!-- Khối Tìm Kiếm, Đăng Nhập & Giỏ Hàng -->
                     <div class="d-flex align-items-center mt-3 mt-lg-0">
                         <form class="form-inline position-relative mr-4" action="products.html">
-                            <input class="form-control rounded-pill search-input pr-5" type="search" placeholder="Tìm hoa sinh nhật..." style="width: 220px; font-size: 0.9rem;">
+                            <input class="form-control rounded-pill search-input pr-5" type="search" id="search-input" placeholder="Tìm loài hoa, màu sắc..." style="width: 200px; font-size: 0.9rem;">
                             <button class="btn btn-link position-absolute text-pink" type="submit" style="right: 5px; top: 0;"><i class="fas fa-search"></i></button>
                         </form>
                         
@@ -44,6 +44,10 @@
                         </a>
                     </div>
                 </div>
+                <a href="yeu-thich.html" class="position-relative text-dark ml-4 mr-3 text-decoration-none" title="Danh sách hoa yêu thích">
+                    <i class="fas fa-heart fa-lg header-heart" style="color: #d87093;"></i>
+                    <span class="badge badge-pill position-absolute wishlist-badge header-wishlist-count">0</span>
+                </a>
             </nav>
         </div>
     </header>
@@ -202,6 +206,68 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Hàm lấy từ khóa, lưu vào bộ nhớ và chuyển trang
+            function thucHienTimKiem() {
+                var keyword = $('#search-input').val().trim();
+                if (keyword !== "") {
+                    localStorage.setItem('nhoTuKhoa', keyword);
+                    
+                    // Nhớ đảm bảo tên file này khớp với tên trang cửa hàng của bạn
+                    window.location.href = 'products.html'; 
+                }
+            }
+
+            // Bắt sự kiện khi khách nhấn phím Enter
+            $('#search-input').on('keypress', function(e) {
+                if (e.which === 13) { 
+                    e.preventDefault(); // Chặn hành vi load lại trang mặc định của form
+                    thucHienTimKiem();
+                }
+            });
+
+            // Bắt sự kiện khi khách click chuột vào nút kính lúp
+            $('.fa-search').closest('button').click(function(e) {
+                e.preventDefault();
+                thucHienTimKiem();
+            });
+        });
+        // ==========================================
+        // TÌM KIẾM THÔNG MINH (THEO TÊN + MÀU + LOÀI HOA) 
+        // ==========================================
+        $('#search-input').on('keyup input change search', function() {
+            var keyword = $(this).val().toLowerCase().trim();
+
+            $('.product-item').each(function() {
+                // Lấy tất cả thông tin của bó hoa để gộp thành 1 chuỗi dài
+                var productName = $(this).text().toLowerCase();
+                var productColor = $(this).attr('data-color') ? $(this).attr('data-color').toLowerCase() : "";
+                var productSpecies = $(this).attr('data-loaihoa') ? $(this).attr('data-loaihoa').toLowerCase() : "";
+                
+                // Chuỗi tổng hợp chứa: Tên hiển thị + Nhãn Màu + Nhãn Loài Hoa
+                var allText = productName + " " + productColor + " " + productSpecies;
+
+                // Tách từ khóa khách gõ thành từng chữ (VD: "hồng vàng" -> ["hồng", "vàng"])
+                var words = keyword.split(" ");
+                var match = true;
+
+                // Kiểm tra xem TẤT CẢ các chữ khách gõ có nằm trong chuỗi tổng hợp không
+                for (var i = 0; i < words.length; i++) {
+                    if (words[i] !== "" && allText.indexOf(words[i]) === -1) {
+                        match = false; // Chỉ cần 1 chữ không khớp là loại luôn bó hoa này
+                        break;
+                    }
+                }
+
+                if (match) {
+                    $(this).attr('style', 'display: block !important;');
+                } else {
+                    $(this).attr('style', 'display: none !important;');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 
