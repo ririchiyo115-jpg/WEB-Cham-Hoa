@@ -30,3 +30,12 @@ dongBoSoLuongYeuThich();
 document.addEventListener('DOMContentLoaded', dongBoSoLuongYeuThich);
 window.addEventListener('pageshow', dongBoSoLuongYeuThich);
 
+// ==========================================
+// TỰ ĐỘNG HIỂN THỊ POP-UP KHUYẾN MÃI (CỨ F5 LÀ HIỆN)
+// ==========================================
+$(document).ready(function() {
+    // Đợi 2 giây sau khi web load xong thì tự động hiện pop-up
+    setTimeout(function() {
+        $('#promoModal').modal('show');
+    }, 2000);
+});
