@@ -9,7 +9,6 @@
  <header class="bg-light shadow-sm sticky-top">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light py-2">
-            <!-- Logo -->
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo 4.png" alt="Chạm Hoa" style="height: 50px; width: auto;">
             </a>
@@ -18,7 +17,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Thêm class align-items-center vào đây để căn giữa toàn bộ menu và các nút điều hướng -->
             <div class="collapse navbar-collapse align-items-center" id="navbarNav">
                 <ul class="navbar-nav mx-auto align-items-center">
                     <li class="nav-item"><a class="nav-link font-weight-bold" href="index.html">Trang chủ</a></li>
@@ -28,7 +26,6 @@
                     <li class="nav-item"><a class="nav-link font-weight-bold" href="contact.html">Liên hệ</a></li>
                 </ul>
 
-                <!-- Khối Tìm Kiếm, Đăng Nhập, Giỏ hàng & Yêu thích (Đã gom chung vào đây và thêm align-items-center) -->
                 <div class="d-flex align-items-center mt-3 mt-lg-0">
                     <form class="form-inline position-relative mr-3 mb-0" action="products.html">
                         <input class="form-control rounded-pill search-input pr-5" type="search" id="search-input" placeholder="Tìm loài hoa, màu sắc..." style="width: 200px; font-size: 0.9rem;">
@@ -207,26 +204,21 @@
     <script src="main.js"></script>
     <script>
         $(document).ready(function() {
-            // Hàm lấy từ khóa, lưu vào bộ nhớ và chuyển trang
             function thucHienTimKiem() {
                 var keyword = $('#search-input').val().trim();
                 if (keyword !== "") {
                     localStorage.setItem('nhoTuKhoa', keyword);
-                    
-                    // Nhớ đảm bảo tên file này khớp với tên trang cửa hàng của bạn
                     window.location.href = 'products.html'; 
                 }
             }
 
-            // Bắt sự kiện khi khách nhấn phím Enter
             $('#search-input').on('keypress', function(e) {
                 if (e.which === 13) { 
-                    e.preventDefault(); // Chặn hành vi load lại trang mặc định của form
+                    e.preventDefault();
                     thucHienTimKiem();
                 }
             });
 
-            // Bắt sự kiện khi khách click chuột vào nút kính lúp
             $('.fa-search').closest('button').click(function(e) {
                 e.preventDefault();
                 thucHienTimKiem();
@@ -239,22 +231,18 @@
             var keyword = $(this).val().toLowerCase().trim();
 
             $('.product-item').each(function() {
-                // Lấy tất cả thông tin của bó hoa để gộp thành 1 chuỗi dài
                 var productName = $(this).text().toLowerCase();
                 var productColor = $(this).attr('data-color') ? $(this).attr('data-color').toLowerCase() : "";
                 var productSpecies = $(this).attr('data-loaihoa') ? $(this).attr('data-loaihoa').toLowerCase() : "";
                 
-                // Chuỗi tổng hợp chứa: Tên hiển thị + Nhãn Màu + Nhãn Loài Hoa
                 var allText = productName + " " + productColor + " " + productSpecies;
 
-                // Tách từ khóa khách gõ thành từng chữ (VD: "hồng vàng" -> ["hồng", "vàng"])
                 var words = keyword.split(" ");
                 var match = true;
 
-                // Kiểm tra xem TẤT CẢ các chữ khách gõ có nằm trong chuỗi tổng hợp không
                 for (var i = 0; i < words.length; i++) {
                     if (words[i] !== "" && allText.indexOf(words[i]) === -1) {
-                        match = false; // Chỉ cần 1 chữ không khớp là loại luôn bó hoa này
+                        match = false;
                         break;
                     }
                 }
