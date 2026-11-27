@@ -43,7 +43,7 @@
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item active"><a class="nav-link font-weight-bold" href="index.html">Trang chủ</a></li>
                         <li class="nav-item"><a class="nav-link font-weight-bold" href="products.html" onclick="localStorage.setItem('nhoDanhMuc', 'all');">Cửa hàng</a></li>
-                        <!-- Thêm mục Tin tức vào đây -->
+                    
                         <li class="nav-item"><a class="nav-link font-weight-bold" href="news.html">Tin tức</a></li>
                         <li class="nav-item"><a class="nav-link font-weight-bold" href="about.html">Về chúng tôi</a></li>
                         <li class="nav-item"><a class="nav-link font-weight-bold" href="contact.html">Liên hệ</a></li>
@@ -75,15 +75,9 @@
         </div>
     </header>
 
-    <!-- ========================================== -->
-    <!-- MỚI: BANNER SLIDER (TRƯỢT 2 ẢNH) -->
-    <!-- ========================================== -->
+    
     <section class="main-banner">
-       
-
-            <!-- Nơi chứa 2 bức ảnh -->
             <div class="carousel-inner">
-                <!-- Banner 1 (Mặc định hiển thị đầu tiên) -->
                 <div class="carousel-item active">
                     <a href="products.html">
                         <img src="images/banner 1.png" class="d-block w-100 img-fluid" alt="Khuyến mãi Chạm Hoa 1" style="max-height: 600px; object-fit: cover;">
@@ -93,7 +87,7 @@
 ></div>
     </section>
 
-    <!-- Dải Cam Kết Dịch Vụ -->
+    <!--  Cam Kết Dịch Vụ -->
     <section class="features-bar bg-white py-4 border-bottom">
         <div class="container">
             <div class="row text-center">
@@ -127,7 +121,7 @@
        <!-- KHÁM PHÁ THEO CHỦ ĐỀ (Trang chủ) -->
 <div class="row text-center category-links">
     <div class="col-4 col-md-2 offset-md-3">
-        <!-- Đã đổi URL và thêm onclick -->
+
         <a href="products.html" class="text-decoration-none" onclick="localStorage.setItem('nhoDanhMuc', 'tinh-yeu');">
             <img src="images/topic tinh yeu.png" class="rounded-circle img-fluid shadow-sm mb-2" alt="Tình Yêu">
             <h6 class="text-dark font-weight-bold mt-2">Tình yêu</h6>
@@ -198,7 +192,7 @@
         </div>
     </section>
 
-   <!-- Ưu Đãi Tuần Này -->
+   <!-- Ưu Đãi -->
     <section class="container mt-5 py-5 bg-light rounded-lg">
         <h2 class="text-center section-title mb-5">ƯU ĐÃI TUẦN NÀY</h2>
         
@@ -261,9 +255,8 @@
             <a href="products.html" class="btn btn-outline-danger rounded-pill px-4" onclick="localStorage.setItem('nhoDanhMuc', 'khuyen-mai');">Khám phá tất cả Ưu đãi</a>
         </div>
     </section>
-    <!-- ========================================== -->
-    <!-- MỚI: MỤC TIN TỨC & BÀI VIẾT BỔ SUNG -->
-    <!-- ========================================== -->
+  
+    <!-- MỚI: MỤC TIN TỨC -->
     <section class="container mt-5 pt-5 border-top">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="section-title mb-0">TIN TỨC & MẸO VẶT</h2>
@@ -466,7 +459,7 @@
                 </div>
             </div>
             
-            <!-- Dòng Bản quyền -->
+        
             <div class="row mt-4 pt-3 border-top">
                 <div class="col-12 text-right">
                     <p class="small text-muted mb-0">© 2026 Website Chạm Hoa. Đồ án môn học - Nhóm 4.</p>
@@ -492,7 +485,7 @@
                         <div class="form-group mb-4">
                             <div class="d-flex justify-content-between">
                                 <label class="small font-weight-bold text-muted">Mật khẩu</label>
-                                <a href="#" class="small text-pink text-decoration-none">Quên mật khẩu?</a>
+                                <a href="#" class="small text-pink text-decoration-none" data-dismiss="modal" data-toggle="modal" data-target="#forgotPasswordModal">Quên mật khẩu?</a>
                             </div>
                             <input type="password" class="form-control rounded-pill" placeholder="Nhập mật khẩu..." required>
                         </div>
@@ -500,6 +493,34 @@
                         <p class="text-center mt-4 mb-0 small text-muted">
                             Chưa có tài khoản? 
                             <a href="#" class="text-pink font-weight-bold" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Đăng ký ngay</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Quên Mật Khẩu -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h4 class="modal-title brand-text mx-auto">ĐẶT LẠI MẬT KHẨU</h4>
+                    <button type="button" class="close position-absolute" style="right: 15px;" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="forgotPasswordForm">
+                        <div class="form-group mb-3">
+                            <label class="small font-weight-bold text-muted">Email đã đăng ký</label>
+                            <input type="email" id="forgotEmail" class="form-control rounded-pill" placeholder="Nhập email của bạn..." required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="small font-weight-bold text-muted">Mật khẩu mới</label>
+                            <input type="password" id="newPassword" class="form-control rounded-pill" placeholder="Nhập mật khẩu mới..." required>
+                        </div>
+                        <button type="submit" class="btn btn-block custom-btn rounded-pill py-2">CẬP NHẬT MẬT KHẨU</button>
+                        <p class="text-center mt-4 mb-0 small text-muted">
+                            Nhớ mật khẩu rồi? 
+                            <a href="#" class="text-pink font-weight-bold" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Quay lại đăng nhập</a>
                         </p>
                     </form>
                 </div>
@@ -540,9 +561,7 @@
         </div>
     </div>
 
-    <!-- ========================================== -->
-    <!-- POP-UP KHUYẾN MÃI (TỰ ĐỘNG HIỆN) -->
-    <!-- ========================================== -->
+    <!-- POP-UP KHUYẾN MÃI-->
     <div class="modal fade" id="promoModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content border-0 shadow-lg" style="border-radius: 15px; overflow: hidden;">
@@ -554,7 +573,7 @@
                 </div>
                 
                 <div class="modal-body p-0 text-center">
-                    <!-- Ảnh bìa Pop-up (Dùng luôn ảnh banner có sẵn của bạn) -->
+                    <!-- Ảnh bìa Pop-up -->
                     <img src="images/popopp.png" alt="Khuyến mãi" class="img-fluid" style="height: 180px; width: 100%; object-fit: cover;">
                     
                     <!-- Phần nội dung chữ và Form -->
@@ -594,7 +613,7 @@
                 if (keyword !== "") {
                     localStorage.setItem('nhoTuKhoa', keyword);
                     
-                    // Nhớ đảm bảo tên file này khớp với tên trang cửa hàng của bạn
+                    
                     window.location.href = 'products.html'; 
                 }
             }
