@@ -788,6 +788,9 @@
 
             // Cập nhật lại giao diện sau khi sắp xếp
             $('#product-list').append($items);
+            hienThiDanhMuc(localStorage.getItem('nhoDanhMuc') || 'all');
+            if ($('#search-input').val().trim() !== '') $('#search-input').trigger('input');
+            apDungXemThem(true);
         });
     });
 </script>
