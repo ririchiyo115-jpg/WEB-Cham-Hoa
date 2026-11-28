@@ -535,6 +535,11 @@
                         </div>  
                     </div>     
                 </div>
+                <div class="text-center mt-4 mb-3" id="khung-xem-them">
+                <button type="button" id="btn-xem-them" class="btn text-white rounded-pill px-4 py-2 shadow-sm" style="background-color: #d87093;">
+                    Xem thêm <i class="fas fa-chevron-down ml-1"></i>
+                </button>
+                </div>
             </div>
         </div>
     </div>                
@@ -636,6 +641,36 @@
         // B. Đọc lại danh mục khách vừa xem (nếu không có thì mặc định hiển thị tất cả 'all')
         var danhMucCu = localStorage.getItem('nhoDanhMuc') || 'all';
         hienThiDanhMuc(danhMucCu); // Gọi hàm để chạy ngay lập tức
+        var soHoaMoiLan = 9;
+        var soLuongDangHien = 9;
+        var dangBamXemThem = false;
+        function apDungXemThem(reset) {
+           if (reset && !dangBamXemThem) soLuongDangHien = soHoaMoiLan;
+           var $hopLe = $('.product-item').filter(function() {
+               return $(this).css('display') !== 'none';
+          });
+           $hopLe.slice(soLuongDangHien).attr('style', 'display: none !important;');
+
+           var conLai = $hopLe.length - soLuongDangHien;
+           if (conLai > 0) {
+               $('#khung-xem-them').show();
+               $('#btn-xem-them').html('Xem thêm hoa (còn ' + conLai + ' mẫu) <i class="fas fa-chevron-down ml-1"></i>');
+           } else {
+               $('#khung-xem-them').hide();
+           }
+        }
+        apDungXemThem(true);
+        $('#btn-xem-them').click(function() {
+            dangBamXemThem = true;
+            soLuongDangHien += soHoaMoiLan;
+            hienThiDanhMuc(localStorage.getItem('nhoDanhMuc') || 'all');
+            if ($('#search-input').val().trim() !== '') {
+                $('#search-input').trigger('input');
+            } else {
+                apDungXemThem(false);
+            }
+            dangBamXemThem = false;
+        });
        // ==========================================
         // CẬP NHẬT SỐ LƯỢNG YÊU THÍCH
         // ==========================================
@@ -653,7 +688,7 @@
             capNhatSoLuongYeuThich();
         }
         // ==========================================
-        // 3. KHI KHÁCH HÀNG BẤM VÀO DANH MỤC TRÊN MENU
+        //  KHI KHÁCH HÀNG BẤM VÀO DANH MỤC TRÊN MENU
         // ==========================================
         $('.category-link').click(function(e) {
             e.preventDefault();
@@ -669,7 +704,7 @@
         });
        
         // ==========================================
-        // 4. TÌM KIẾM THÔNG MINH (THEO TÊN + MÀU + LOÀI HOA)
+        //  TÌM KIẾM THÔNG MINH (THEO TÊN + MÀU + LOÀI HOA)
         // ==========================================
         $('#search-input').on('keyup input change search', function() {
             var keyword = $(this).val().toLowerCase().trim();
@@ -704,7 +739,7 @@
         });
 
         // ==========================================
-        // 5. LỌC THEO DANH MỤC (MENU TRÁI)
+        //  LỌC THEO DANH MỤC (MENU TRÁI)
         // ==========================================
         $('.category-link').click(function(e) {
             e.preventDefault();
@@ -730,7 +765,7 @@
         });
 
         // ==========================================
-        // 6. CHỨC NĂNG SẮP XẾP THEO GIÁ (MENU PHẢI)
+        // CHỨC NĂNG SẮP XẾP THEO GIÁ (MENU PHẢI)
         // ==========================================
         $('#sort-price').change(function() {
             var sortOption = $(this).val();
